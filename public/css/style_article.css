@@ -2,7 +2,11 @@
 body {
   font-family: 'Open Sans', arial, sans-serif;
   color: #333;
-  font-size: 14px;
+  font-size: 25px;
+  text-align: justify;
+}
+h1{
+  text-align: center;
 }
 .projcard-container {
   margin: 50px 0;
@@ -21,7 +25,7 @@ body {
 .projcard {
   position: relative;
   width: 75%;
-  height: 500px;
+  height: 700px;
   margin: auto;
   border-radius: 10px;
    background-color: #fff;
@@ -58,7 +62,7 @@ body {
 }
 .projcard-img {
   position: absolute;
-  height: 500px;
+  height: 700px;
   object-fit: cover;
   width: 400px;
   top: 0;
@@ -81,7 +85,7 @@ body {
   bottom: 7%;
   left: 430px;
   width: calc(100% - 470px);
-  font-size: 17px;
+  font-size: 20px;
 }
 .projcard:nth-child(2n) .projcard-textbox {
   left: initial;
@@ -98,7 +102,7 @@ body {
   left: -55px;
   height: 140%;
   width: 60px;
-  transform: rotate(8deg);
+  transform: rotate(5deg);
 }
 .projcard:nth-child(2n) .projcard-textbox::before {
   display: none;
