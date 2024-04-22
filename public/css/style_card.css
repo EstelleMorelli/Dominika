@@ -1,5 +1,5 @@
 .menu{
-  background-color: black;
+
   font-weight: bolder;
   font-size: larger;
 }
@@ -61,7 +61,7 @@
     overflow: hidden;
   
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     color: #FFF;
   
     z-index: 2;

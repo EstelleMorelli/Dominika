@@ -1,6 +1,6 @@
 <nav class="menu">
   <ol>
-    <li class="menu-item"><a href="<?= $router->generate('main-home');?>">Accueil</a></li>
+    <li class="black" class="menu-item"><a href="<?= $router->generate('main-home');?>">Accueil</a></li>
     <li class="menu-item"><a href="<?= $router->generate('main-about');?>">A propos de moi</a></li>
     <li class="menu-item">
       <a href="#0">Coach Sportif</a>
