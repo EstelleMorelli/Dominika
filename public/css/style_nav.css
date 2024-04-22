@@ -71,7 +71,6 @@ body{
         --gradient-color:#FE90AF;
       }
       a{
-
         color:#FBFBFB;
         display:block;
         padding:15px;
@@ -183,7 +182,7 @@ body{
       &:hover,&:focus,&:focus-within{
         &:after{
           background:linear-gradient(to bottom, var(--accent-color), var(--gradient-color));
-          border-radius:3px;
+          border-radius:7px;
           top:-15px;
           bottom:-15px;
           left:-15px;
@@ -231,4 +230,5 @@ body{
 }
 .black{
   background-color: #000000;
+  border-radius:7px;
 }

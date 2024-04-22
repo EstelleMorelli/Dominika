@@ -2,6 +2,7 @@
   <ol>
     <li class="black" class="menu-item"><a href="<?= $router->generate('main-home');?>">Accueil</a></li>
     <li class="menu-item"><a href="<?= $router->generate('main-about');?>">A propos de moi</a></li>
+    <li class="menu-item"><a href="<?= $router->generate('main-contact');?>">Contact</a></li>
     <li class="menu-item">
       <a href="#0">Coach Sportif</a>
       <ol class="sub-menu">
@@ -18,6 +19,6 @@
         <li class="menu-item"><a href="<?= $router->generate('posturologie-session');?>">Comment se déroule une séance ?</a></li>
       </ol>
     </li>
-    <li class="menu-item"><a href="<?= $router->generate('main-contact');?>">Contact</a></li>
+    
   </ol>
 </nav>

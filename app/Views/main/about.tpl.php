@@ -2,7 +2,7 @@
 <div class="ag-format-container">
   <div class="ag-courses_box">
     <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
+      <a href="<?= $router->generate('coaching-definition');?>" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
@@ -18,7 +18,7 @@
     </div>
 
     <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
+      <a href="<?= $router->generate('coaching-needed');?>" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
@@ -35,7 +35,7 @@
     </div>
 
     <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
+      <a href="<?= $router->generate('coaching-session');?>" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
@@ -52,7 +52,7 @@
     </div>
 
     <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
+      <a href="<?= $router->generate('posturologie-definition');?>" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
@@ -69,7 +69,7 @@
     </div>
 
     <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
+      <a href="<?= $router->generate('posturologie-needed');?>" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
@@ -86,7 +86,7 @@
     </div>
 
     <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
+      <a href="<?= $router->generate('posturologie-session');?>" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
@@ -96,7 +96,7 @@
     </div>
 
     <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
+      <a href="<?= $router->generate('main-contact');?>" class="ag-courses-item_link">
         <div class="ag-courses-item_bg">
         </div>
         <div class="ag-courses-item_title">
@@ -106,7 +106,7 @@
     </div>
 
     <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
+      <a href="" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">

@@ -12,6 +12,7 @@
   
   body {
     background-color: #000;
+
   }
   .ag-courses_box {
     display: -webkit-box;
@@ -30,7 +31,7 @@
     flex-basis: calc(33.33333% - 30px);
   
     margin: 0 15px 30px;
-  
+ 
     overflow: hidden;
   
     border-radius: 28px;
@@ -39,7 +40,7 @@
     display: block;
     padding: 30px 20px;
     background-color: #121212;
-  
+    text-decoration: none !important;
     overflow: hidden;
   
     position: relative;
@@ -61,7 +62,8 @@
     overflow: hidden;
   
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
+    padding: 20px 0 0 ;
     color: #FFF;
   
     z-index: 2;
