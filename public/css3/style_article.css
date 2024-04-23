@@ -1,7 +1,7 @@
 /* Demo Code: */
 body {
   font-family: 'Open Sans', arial, sans-serif;
-  color: #333;
+  color: var(--color1);
   font-size: 25px;
   text-align: justify;
 }
@@ -30,8 +30,8 @@ h1{
   height: 700px;
   margin: auto;
   border-radius: 10px;
-   background-color: #fff;
-  border: 2px solid #ddd;
+   background-color: var(--color2);
+  border: 2px solid var(--color2);
   font-size: 18px;
   overflow: hidden;
   cursor: pointer;
@@ -99,7 +99,7 @@ h1{
   position: absolute;
   display: block;
   background: #ff0000bb;
-  background: #fff;
+  background: var(--color2);
   top: -20%;
   left: -55px;
   height: 140%;

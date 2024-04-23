@@ -1,0 +1,14 @@
+:root{
+  --color1: black;
+  --color2: rgb(141, 215, 228);
+  --color3: #007c7c; /*#f9b234*/
+  --color4: #8a238a;
+}
+
+.dark{
+  background-color: var(--color1);
+  color: var(--color3);
+  text-align: center;
+  font-size: large;
+}
+
