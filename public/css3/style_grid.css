@@ -30,6 +30,8 @@
   
   .title{
     text-align: center;
+    text-shadow: 2px 7px 5px var(--color2), 
+    0px -4px 10px var(--color2);
   }
 
   .before-after{
