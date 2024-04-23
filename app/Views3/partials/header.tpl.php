@@ -7,15 +7,14 @@
 
     <link rel="stylesheet" href="<?= $baseUri ?>css3/style.css">
     <link rel="stylesheet" href="<?= $baseUri ?>css3/style_card.css">
-    <link rel="stylesheet" href="<?= $baseUri ?>css3/style_nav.css">
+
     <link rel="stylesheet" href="<?= $baseUri ?>css3/style_background.css">
     <link rel="stylesheet" href="<?= $baseUri ?>css3/style_article.css">
     <link rel="stylesheet" href="<?= $baseUri ?>css3/style_article2.css">
     <link rel="stylesheet" href="<?= $baseUri ?>css3/style_form.css">
+    <link rel="stylesheet" href="<?= $baseUri ?>css3/style_nav.css">
+    <link rel="stylesheet" href="<?= $baseUri ?>css3/style_grid.css">
 
 </head>
 
-<body data-bs-theme="dark">
-    <header>
-        <h1> Dominika </h1>
-        
+<body>
