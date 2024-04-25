@@ -11,7 +11,7 @@ class MainController extends CoreController
      */
     public function mainHome()
     {
-        $this->show('main/home');
+        $this->show('main/mindmap');
     }
 
        /**

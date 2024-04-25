@@ -1,8 +1,8 @@
 :root{
-  --color1: rgb(0, 255, 242);
-  --color2: rgb(0, 0, 0);
-  --color3: #feffa9; /*#f9b234*/
-  --color4: #8a238a;
+  --color1: rgb(0, 255, 242); /*FOND DE LA NAV ET DES CARDS + ECRITURE DES ARTICLES + ECRITURE DES TAGS*/
+  --color2: rgb(255, 0, 0); /*ECRITURE DE LA NAV ET DES CARDS  + FOND DES ARTICLES + OMBRE DU H1*/
+  --color3: #feffa9; /*HOVER DES CARDS + FOND DES TAGS DES ARTICLES*/
+  --color4: #00ff0d; /*BACKGROUND GENERAL */
 }
 
 .dark{

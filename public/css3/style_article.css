@@ -27,7 +27,7 @@ h1{
 .projcard {
   position: relative;
   width: 75%;
-  height: 700px;
+  height: 100vh;
   margin: auto;
   border-radius: 10px;
    background-color: var(--color2);
@@ -64,7 +64,7 @@ h1{
 }
 .projcard-img {
   position: absolute;
-  height: 700px;
+  height: 100vh;
   object-fit: cover;
   width: 400px;
   top: 0;
@@ -102,9 +102,9 @@ h1{
   background: var(--color2);
   top: -20%;
   left: -55px;
-  height: 140%;
+  height: 150%;
   width: 60px;
-  transform: rotate(5deg);
+  transform: rotate(4deg);
 }
 .projcard:nth-child(2n) .projcard-textbox::before {
   display: none;
@@ -177,8 +177,8 @@ h1{
 }
 .projcard-tag {
   display: inline-block;
-  background: #E0E0E0;
-  color: #777;
+  background: var(--color3);
+  color: var(--color1);
   border-radius: 3px 0 0 3px;
   line-height: 26px;
   padding: 0 10px 0 23px;

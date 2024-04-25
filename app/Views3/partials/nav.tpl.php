@@ -23,9 +23,9 @@
         <input type="checkbox" id="showDrop">
         <label for="showDrop" class="mobile-item">Posturologue</label>
         <ul class="drop-menu">
-        <li class="menu-item"><a href="<?= $router->generate('posturologie-definition');?>">Qu'est ce que la posturologie ?</a></li>
-        <li class="menu-item"><a href="<?= $router->generate('posturologie-needed');?>">Quand faire appel a un posturologue ?</a></li>
-        <li class="menu-item"><a href="<?= $router->generate('posturologie-session');?>">Comment se déroule une séance ?</a></li>
+        <li class="menu-item"><a href="<?= $router->generate('posturologie-definition');?>">Définition</a></li>
+        <li class="menu-item"><a href="<?= $router->generate('posturologie-needed');?>">Quand consulter</a></li>
+        <li class="menu-item"><a href="<?= $router->generate('posturologie-session');?>">Déroulement</a></li>
         </ul>
       </li>
     </ul>
