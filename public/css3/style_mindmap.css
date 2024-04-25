@@ -80,10 +80,10 @@ body {
 			background: rgba(0, 0, 0, 0.4);
 		}
 		&.item-a {
-			background-image: url("https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=600&q=80");
+			background-image: url("https://static.wixstatic.com/media/c385ca_909589be90b84f4b85609a9d980f9726.jpg/v1/fill/w_322,h_300,al_c,lg_1,q_80,enc_auto/c385ca_909589be90b84f4b85609a9d980f9726.jpg");
 		}
 		&.item-b {
-			background-image: url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80");
+			background-image: url("https://images.rtl.fr/~c/770v513/rtl/www/1307726-troubles-de-l-apprentissage-dys-comment-aider-nos-enfants.jpg");
 		}
 		&.item-c {
 			background-image: url("https://images.unsplash.com/photo-1525945518069-b924046d1385?auto=format&fit=crop&w=600&q=80");
@@ -143,3 +143,38 @@ body {
 		}
 	}
 }
+
+
+.container {  display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . . . . . . "
+      " . subject1 . subject2 . subject3 ."
+      ". . . . . . . "
+      " . subject4 . Posturologie . subject5 ."
+      ". . . . . . . "
+      ". subject6 . subject7 . subject8 ."
+      ". . . . . . .";
+  }
+  
+  .Posturologie { grid-area: Posturologie; }
+  
+  .subject1 { grid-area: subject1; }
+  
+  .subject2 { grid-area: subject2; }
+  
+  .subject3 { grid-area: subject3; }
+  
+  .subject4 { grid-area: subject4; }
+  
+  .subject5 { grid-area: subject5; }
+  
+  .subject6 { grid-area: subject6; }
+  
+  .subject7 { grid-area: subject7; }
+  
+  .subject8 { grid-area: subject8; }
+  
