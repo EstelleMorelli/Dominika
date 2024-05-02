@@ -30,3 +30,13 @@ document.querySelectorAll(".projcard-description").forEach(function(box) {
   $clamp(box, {clamp: 6});
 });
 
+ // Ajoute et supprime la classe "circle" au survol
+ const circles = document.querySelectorAll('.circle');
+ circles.forEach(circle => {
+     circle.addEventListener('mouseenter', function() {
+         this.classList.add('circle');
+     });
+     circle.addEventListener('mouseleave', function() {
+         this.classList.remove('circle');
+     });
+ });

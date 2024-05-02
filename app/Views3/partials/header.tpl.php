@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="<?= $baseUri ?>css3/style_form.css">
     <link rel="stylesheet" href="<?= $baseUri ?>css3/style_nav.css">
     <link rel="stylesheet" href="<?= $baseUri ?>css3/style_grid.css">
-    <link rel="stylesheet" href="<?= $baseUri ?>css3/style_mindmap.css">
 
 </head>
 

@@ -238,3 +238,16 @@
   text-align: center;
   font-size: large;
 }
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: transparent; /* Fond transparent pour que l'image soit visible */
+  cursor: pointer; /* Curseur de type main pour indiquer l'interactivité */
+  transition: box-shadow 0.3s ease; /* Animation pour l'effet d'ombre */
+}
+
+/* Effet d'ombre au survol */
+.circle:hover {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 1); /* Ombre noire légère */
+}
