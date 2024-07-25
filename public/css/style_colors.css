@@ -1,0 +1,7 @@
+
+:root{
+  --color-bg: #EEEDEB; /*couleur de fond pour créer un léger contraste avec le blanc ou du texte sur fond sombre*/
+  --color-light: #E0CCBE; /*Couleur des différents éléments visuels et accents et du texte sur fond sombre*/
+  --color-dark-elem: #747264; /*Couleur des différents éléments visuels et accents*/
+  --color-dark-txt: #3C3633; /*Couleur principale du texte sur fond clair */
+}

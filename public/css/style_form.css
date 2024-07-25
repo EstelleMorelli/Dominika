@@ -12,10 +12,10 @@
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid var(--color-bg);
   outline: 0;
   font-size: 1.7rem;
-  color: #fff;
+  color: var(--color-light);
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
@@ -33,7 +33,7 @@
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: #000000;
+  color: var(--color-bg);
   font-weight: bold;
 }
 
@@ -44,7 +44,7 @@
     display: block;
     transition: 0.2s;
     font-size: 1.7rem;
-    color: #11998e;
+    color: var(--color-dark-elem);
     font-weight:700;    
   }
   padding-bottom: 6px;  

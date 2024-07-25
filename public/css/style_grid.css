@@ -1,0 +1,59 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-rows: 0.25fr 0.3fr 0.5fr 0.5fr 0.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        " nav nav nav "
+        " title title title "
+      "one before-after four"
+      "two before-after five"
+      "three before-after six";
+  }
+  .nav { grid-area: nav; }
+
+  .title { grid-area: title; }
+
+  .one { grid-area: one; }
+  
+  .two { grid-area: two; }
+  
+  .three { grid-area: three; }
+  
+  .four { grid-area: four; }
+  
+  .five { grid-area: five; }
+  
+  .six { grid-area: six; }
+  
+  .before-after { grid-area: before-after; }
+  
+  .title{
+    text-align: center;
+    text-shadow: 2px 7px 5px var(--color-light), 
+    0px -4px 10px var(--color-light);
+  }
+
+  .before-after{
+    border-radius: 50%;
+  }
+
+  .mindmapimg {
+    display: block;
+    margin: 2rem auto;
+    width: 90vw;
+    background-color: var(--color-light);
+    border-radius: 2rem;
+  }
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: transparent; /* Fond transparent pour que l'image soit visible */
+    cursor: pointer; /* Curseur de type main pour indiquer l'interactivité */
+    transition: box-shadow 0.3s ease; /* Animation pour l'effet d'ombre */
+  }
+  
+  /* Effet d'ombre au survol */
+  .circle:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 1); /* Ombre noire légère */
+  }

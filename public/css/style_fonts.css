@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Aesthetic Romance";
+    src: url('../fonts/AestheticRomance.ttf');
+  }
+  @font-face {
+    font-family: "Gilroy Medium";
+    src: url('../fonts/"GilroyMedium.ttf');
+  }
+  @font-face {
+    font-family: "Gilroy Light";
+    src: url('../fonts/"GilroyLight.ttf');
+  }
+  :root{
+    --font-main-title: "Aesthetic Romance", sans-serif; /* Utilisation uniquement en tant que titre, élèments impactants. Sur quelques mots voir une phrase courte du fait de la faible lisibilité */
+    --font-secondary-title: "Gilroy Medium", sans-serif; /* Utilisation pour faire ressortir des éléments du texte, en tant que titres secondaires, sous-titres ou légendes */
+    --font-basic-txt: "Gilroy Light", sans-serif; /* Utilisation en tant que corps de texte */
+  }
