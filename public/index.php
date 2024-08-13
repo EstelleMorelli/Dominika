@@ -34,61 +34,69 @@ $router->map(
     ],
     'main-about'
 );
+$router->map(
+    'GET',
+    '/coaching',
+    [
+        'method' => 'coaching',
+        'controller' => '\App\Controllers\ArticlesController' 
+    ],
+    'coaching'
+);
+$router->map(
+    'GET',
+    '/douleurs-persistantes',
+    [
+        'method' => 'douleursPeristantes',
+        'controller' => '\App\Controllers\ArticlesController' 
+    ],
+    'douleurs-persistantes'
+);
+$router->map(
+    'GET',
+    '/difficultes-scolaires',
+    [
+        'method' => 'difficultesScolaires',
+        'controller' => '\App\Controllers\ArticlesController' 
+    ],
+    'difficultes-scolaires'
+);
+$router->map(
+    'GET',
+    '/hernie-discale',
+    [
+        'method' => 'hernieDiscale',
+        'controller' => '\App\Controllers\ArticlesController'
+    ],
+    'hernie-discale'
+);
 
 $router->map(
     'GET',
-    '/posturologie/definition',
+    '/maux-de-tete',
     [
-        'method' => 'posturologieDefinition',
-        'controller' => '\App\Controllers\PosturologieController' 
+        'method' => 'mauxTete',
+        'controller' => '\App\Controllers\ArticlesController' 
     ],
-    'posturologie-definition'
+    'maux-de-tete'
 );
 $router->map(
     'GET',
-    '/posturologie/seance',
+    '/performance',
     [
-        'method' => 'posturologieSession',
-        'controller' => '\App\Controllers\PosturologieController' 
+        'method' => 'performance',
+        'controller' => '\App\Controllers\ArticlesController' 
     ],
-    'posturologie-session'
+    'performance'
 );
 $router->map(
     'GET',
-    '/posturologie/quand-appeler',
+    '/posturologie',
     [
-        'method' => 'posturologieNeeded',
-        'controller' => '\App\Controllers\PosturologieController'
+        'method' => 'posturologie',
+        'controller' => '\App\Controllers\ArticlesController'
     ],
-    'posturologie-needed'
-);
-
-$router->map(
-    'GET',
-    '/coaching/definition',
-    [
-        'method' => 'coachingDefinition',
-        'controller' => '\App\Controllers\CoachingController' 
-    ],
-    'coaching-definition'
-);
-$router->map(
-    'GET',
-    '/coaching/seance',
-    [
-        'method' => 'coachingSession',
-        'controller' => '\App\Controllers\CoachingController' 
-    ],
-    'coaching-session'
-);
-$router->map(
-    'GET',
-    '/coaching/quand-appeler',
-    [
-        'method' => 'coachingNeeded',
-        'controller' => '\App\Controllers\CoachingController'
-    ],
-    'coaching-needed'
+    'posturologie'
 );
 $router->map(
     'GET',

@@ -183,11 +183,31 @@ padding: 1rem 2rem 1rem 2rem;
 border-radius: 5rem;
 
 }
+/*@keyframes reveal {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+animation: reveal linear;
+animation-timeline: view();
+animation-range-start: cover 0%;
+animation-range-end: contain 50%;*/
 .about {
-  display: inline-block;
-  background-color: var(--color-bg);
-  width: 100%;
-  margin: auto;
+
+  width: 90vw;
+  margin: 2rem auto;
+  border-radius: 2rem;
+  background-color: var(--color-light);
+
+&.textandpicture{
+  display: flex;
+  flex-direction: row;
+}
   &.title{
     text-align: left;
     font-size: larger;
@@ -196,6 +216,9 @@ border-radius: 5rem;
     padding: 1rem 2rem 0rem 2rem;
     text-shadow: none;
 
+  }
+  &.photo {
+    width: 20%;
   }
   &.intro{
     text-align: justify;

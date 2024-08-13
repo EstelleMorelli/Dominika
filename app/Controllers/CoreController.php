@@ -66,9 +66,7 @@ class CoreController
 
 
         require_once __DIR__ . '/../Views/partials/header.tpl.php';
-        
         require_once __DIR__ . '/../Views/partials/nav.tpl.php';
-     
         require_once __DIR__ . '/../Views/' . $viewName . '.tpl.php';
         require_once __DIR__ . '/../Views/partials/footer.tpl.php';
     }
