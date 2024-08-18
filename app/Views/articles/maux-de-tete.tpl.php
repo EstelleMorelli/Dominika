@@ -1,5 +1,5 @@
 <article>
-    <img class="article--picture" src="../../public/images/migraine.jpg" alt="maux de tete et vertiges"
+    <img class="article--picture" src="../../public/images/migraine.jpg" alt="maux de tete et vertiges" />
     <h2 class="article--title">
     Maux de tête/ vertiges :
     </h2>
