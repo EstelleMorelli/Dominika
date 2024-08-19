@@ -224,5 +224,15 @@ animation-range-end: contain 50%;*/
     text-align: justify;
     padding: 2rem;
   }
-
+article {
+  width: 90vw;
+  margin: 2rem auto;
+  border-radius: 2rem;
+  background-color: var(--color-light);
+  &--picture{
+    height: 100%;
+    
+    object-git: cover;
+    
+  
 }
