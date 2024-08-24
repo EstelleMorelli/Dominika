@@ -1,5 +1,5 @@
 <article> 
-    <img class="article--picture" src="../../public/images/douleurs-persistantes.png" alt="douleurs persistantes" />
+    <img class="article--picture" src="images/douleurs-persistantes.png" alt="douleurs persistantes" />
     <h2 class="article--title">
     Avez-vous déjà ressenti ces <mark> douleurs tenaces </mark>, difficiles à expliquer et qui reviennent sans cesse ? 
     </h2>

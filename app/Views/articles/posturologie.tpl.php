@@ -1,5 +1,5 @@
 <article> 
-    <img class="article--picture" src="../../public/images/posturologie.jpg" alt="posturologie" />
+    <img class="article--picture" src="images/posturologie.jpg" alt="posturologie" />
     <h2 class="article--title">
     La Posturologie : Une Approche Holistique pour Traiter les Douleurs à leur Source
     </h2>

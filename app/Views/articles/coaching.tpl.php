@@ -1,5 +1,5 @@
 <article> 
-      <img class="article--picture" src="../../public/images/coaching.png" alt="coaching"/>
+      <img class="article--picture" src="images/coaching.jpg" alt="coaching"/>
     <h2 class="article--title">
   Coaching :
     </h2>

@@ -1,5 +1,5 @@
 <article> 
-      <img class="article--picture" src="../../public/images/difficultes-scolaires.jpg" alt="difficultes scolaires"/>
+      <img class="article--picture" src="images/difficultes-scolaires.jpg" alt="difficultes scolaires"/>
     <h2 class="article--title">
     Saviez-vous que la motricité est cruciale pour le développement cérébral de votre enfant ? 
     </h2>
