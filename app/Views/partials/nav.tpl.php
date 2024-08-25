@@ -1,10 +1,5 @@
 <nav class="nav">
   <div class="wrapper">
-
-
-    <!--<img src="images/Dlogo1.png" alt="Logo" class="logoDominika">
-    <img src="images/Dlogo2.png" alt="Logo" class="logoDominika">
-    <img src="images/Dlogo3.png" alt="Logo" class="logoDominika">-->
     <div class="logo-and-name"> 
       <img src="<?= $baseUri ?>images\DominikaMenoPictoClair.png" alt="Dominika Meno" class="logoDominika">
        <div class="name"><a href="#">DOMINIKA MENO</a></div>

@@ -1,0 +1,19 @@
+.footer {
+    background-color: var(--color-light);
+    color: var(--color-dark-txt);
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+.appear {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
