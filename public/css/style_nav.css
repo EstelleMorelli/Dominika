@@ -76,7 +76,30 @@ flex-direction: row;
   padding: 1rem;
   border-radius: 2rem;
 }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
+.nav--menu__link-article a {
+  color: var(--color-light);
+  font-size: larger;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 1rem;
+  position: relative;
+}
+
+.nav-menu__link-list-title{
+  padding-left: 1rem;
+}
+
+.nav--menu__link-article a:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark-txt);
+  padding: 0.1rem;
+  border-radius: 2rem;
+}
 .nav--menu {
   display: none;
 }

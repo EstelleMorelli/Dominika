@@ -17,9 +17,17 @@
       <li class="nav--menu__link"><a href="<?= $router->generate('main-home');?>">Accueil</a></li>
       <li class="nav--menu__link"><a href="<?= $router->generate('main-about');?>">Qui suis-je ?</a></li>
       <li class="nav--menu__link"><a href="<?= $router->generate('posturologie');?>">La Posturologie</a></li>
+      <ul class="nav--menu__link-list-articles">
+      <div class="nav-menu__link-list-title"> <strong> Articles </strong></div>
+      <li class="nav--menu__link-article"><a href="<?= $router->generate('difficultes-scolaires');?>">Problèmes d'apprentissage</a></li>
+      <li class="nav--menu__link-article"><a href="<?= $router->generate('douleurs-persistantes');?>">Douleurs peristantes</a></li>
+      <li class="nav--menu__link-article"><a href="<?= $router->generate('hernie-discale');?>">Prévention des blessures</a></li>
+      <li class="nav--menu__link-article"><a href="<?= $router->generate('performance');?>">Potentiel de performance</a></li>
+      <li class="nav--menu__link-article"><a href="<?= $router->generate('coaching');?>">Coaching sportif</a></li>
+      <li class="nav--menu__link-article"><a href="<?= $router->generate('maux-de-tete');?>">Maux de tête & vertiges</a></li>
+      </ul>
       <li class="nav--menu__link"><a href="<?= $router->generate('main-infos-pratiques');?>">Infos pratiques</a></li>
-      </li>
-     </ul>
+    </ul>
   </nav>
   <div class="nav--burger">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#e0ccbe" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>

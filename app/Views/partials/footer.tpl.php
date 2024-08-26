@@ -11,14 +11,14 @@
     39000 Lons-le-Saunier </br>
 </div>
 <ul class="footer menu--main appear">
-    Menu Principal
+    <strong> Menu Principal </strong>
     <li><a href="<?= $router->generate('main-home');?>">Accueil</a></li>
     <li><a href="<?= $router->generate('main-about');?>">Qui suis-je ?</a></li>
     <li><a href="<?= $router->generate('posturologie');?>">La Posturologie</a></li>
     <li><a href="<?= $router->generate('main-contact');?>">Infos Pratiques et Contact</a></li>
 </ul>
 <ul class="footer menu--articles appear">
-    Articles
+    <strong> Articles </strong>
     <li class="menu-item"><a href="<?= $router->generate('difficultes-scolaires');?>">Problèmes d'apprentissage</a></li>
     <li class="menu-item"><a href="<?= $router->generate('douleurs-persistantes');?>">Douleurs peristantes</a></li>
     <li class="menu-item"><a href="<?= $router->generate('hernie-discale');?>">Prévention des blessures</a></li>
@@ -27,7 +27,7 @@
     <li class="menu-item"><a href="<?= $router->generate('maux-de-tete');?>">Maux de tête & vertiges</a></li>
 </ul>
 <div class="footer developer">
-    Conception : <a href="mailto:dev.morelliestelle@gmail.com">Estelle MORELLI</a>
+<strong> Conception : </strong> <a href="mailto:dev.morelliestelle@gmail.com">Estelle MORELLI</a>
 </div>
 </footer>
 </html>
