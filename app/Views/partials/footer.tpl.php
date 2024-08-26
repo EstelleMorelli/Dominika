@@ -2,12 +2,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" integrity="sha256-ihAoc6M/JPfrIiIeayPE9xjin4UWjsx2mjW/rtmxLM4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="../scripts/script.js"></script>
+    <script src="<?= $baseUri ?>scripts\script.js"></script>
 </body>
 <footer>
 <div class="footer adress appear">
-<img src="<?= $baseUri ?>images\DominikaMenoPictogrammeSeul.png" alt="Dominika Meno" class="logoDominika">
-    Dominika Meno </br>
+<img src="<?= $baseUri ?>images\DominikaMenoLogoPrincipal.png" alt="Dominika Meno" class="logoDominika">
     145 Rue Regard </br>
     39000 Lons-le-Saunier </br>
 </div>
