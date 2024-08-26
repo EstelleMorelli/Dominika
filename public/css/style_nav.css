@@ -273,9 +273,10 @@ nav .wrapper {
 }
 .wrapper .btn {
   color: var(--color-light);
+  background-color: var(--color-bg);
   font-size: 20px;
   cursor: pointer;
-  display: none;
+  /*display: none;*/
 }
 .wrapper .btn.close-btn {
   position: absolute;
@@ -315,3 +316,5 @@ nav input {
   font-size: xx-large ;
 }
 }
+
+

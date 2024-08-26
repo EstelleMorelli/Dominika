@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOMINIKA MENO</title>
-    
+
     <link rel="stylesheet" href="<?= $baseUri ?>css/style_before-after.css">
     <link rel="stylesheet" href="<?= $baseUri ?>css/style_colors.css">
     <link rel="stylesheet" href="<?= $baseUri ?>css/style_card.css">

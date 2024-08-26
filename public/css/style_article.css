@@ -251,13 +251,13 @@ article {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .article--text {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   text-align: justify;
 }
 
