@@ -83,7 +83,7 @@ ul {
 
 .nav--menu__link-article a {
   color: var(--color-light);
-  font-size: larger;
+  font-size: x-large;
   font-weight: 500;
   text-decoration: none;
   padding: 1rem;
@@ -92,6 +92,7 @@ ul {
 
 .nav-menu__link-list-title{
   padding-left: 1rem;
+  font-size: xx-large;
 }
 
 .nav--menu__link-article a:hover {
@@ -151,14 +152,9 @@ transition: 0.3s transform ease-in-out;
   cursor: pointer;
 }
 
-.test {
-  display: none;
+.last {
+  padding-top: 2rem;
 }
-
-.test.open {
-  display: flex;
-}
-
 
 
 

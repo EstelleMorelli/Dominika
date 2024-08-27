@@ -26,7 +26,7 @@
       <li class="nav--menu__link-article"><a href="<?= $router->generate('coaching');?>">Coaching sportif</a></li>
       <li class="nav--menu__link-article"><a href="<?= $router->generate('maux-de-tete');?>">Maux de tête & vertiges</a></li>
       </ul>
-      <li class="nav--menu__link"><a href="<?= $router->generate('main-infos-pratiques');?>">Infos pratiques</a></li>
+      <li class="nav--menu__link last"><a href="<?= $router->generate('main-infos-pratiques');?>">Infos pratiques</a></li>
     </ul>
   </nav>
   <div class="nav--burger">

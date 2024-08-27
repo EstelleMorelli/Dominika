@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?= $baseUri ?>css/style_nav.css">
     <link rel="stylesheet" href="<?= $baseUri ?>css/style_fonts.css">
     <link rel="stylesheet" href="<?= $baseUri ?>css/style_footer.css">
+    <link rel="stylesheet" href="<?= $baseUri ?>css/style_mindmap.css">
 
 
 </head>

@@ -4,11 +4,11 @@
   }
   @font-face {
     font-family: "Gilroy Medium";
-    src: url('../fonts/"GilroyMedium.ttf');
+    src: url('../fonts/GilroyMedium.ttf');
   }
   @font-face {
     font-family: "Gilroy Light";
-    src: url('../fonts/"GilroyLight.ttf');
+    src: url('../fonts/GilroyLight.ttf');
   }
   :root{
     --font-main-title: "Aesthetic Romance", sans-serif; /* Utilisation uniquement en tant que titre, élèments impactants. Sur quelques mots voir une phrase courte du fait de la faible lisibilité */
