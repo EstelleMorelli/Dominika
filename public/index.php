@@ -1,7 +1,6 @@
 <?php
 
-
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 //session_start();
 
 $router = new AltoRouter();
@@ -24,6 +23,16 @@ $router->map(
         'controller' => '\App\Controllers\MainController' 
     ],
     'main-home'
+);
+
+$router->map(
+    'GET',
+    '/',
+    [
+        'method' => 'mainHome',
+        'controller' => '\App\Controllers\MainController' 
+    ],
+    'main-home2'
 );
 $router->map(
     'GET',
