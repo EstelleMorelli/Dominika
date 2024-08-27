@@ -4,16 +4,23 @@
     margin: 0.5rem;
     padding: 1rem;
     border-radius: 2rem;
+    text-align: center;
 }
 
-a {
+footer a {
     text-decoration: none;
 }
-ul {
+footer ul {
     list-style-type: none;
 }
 .appear {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
+}
+
+.logoDominika {
+    display: block;
+    max-width: 15rem;
+    margin: 0 auto;
 }

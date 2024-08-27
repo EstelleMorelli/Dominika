@@ -1,5 +1,5 @@
 </body>
-<div class="projcard-container">
+
     <div class="form__group field">
         <input type="input" class="form__field" placeholder="NOM Prénom" name="name" id='name' required />
         <label for="name" class="form__label">NOM Prénom</label>
@@ -17,4 +17,3 @@
     <div class="form__group">
         <button class="btn btn-primary" type="submit">Submit form</button>
     </div>
-</div>

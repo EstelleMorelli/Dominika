@@ -116,7 +116,15 @@ $router->map(
     ],
     'main-contact-post'
 );
-
+$router->map(
+    'GET',
+    '/infos-pratiques',
+    [
+        'method' => 'infosPratiques',
+        'controller' => '\App\Controllers\MainController' 
+    ],
+    'main-infos-pratiques'
+);
 /* -------------
 --- DISPATCH ---
 --------------*/

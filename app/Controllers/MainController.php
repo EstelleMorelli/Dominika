@@ -44,4 +44,13 @@ class MainController extends CoreController
     {
         $this->show('main/form');
     }
+        /**
+     * Méthode s'occupant de l'affichage du formulaire de connexion d'un utilisateur
+     *
+     * @return void
+     */
+    public function infosPratiques()
+    {
+        $this->show('main/infos-pratiques');
+    }
 }
