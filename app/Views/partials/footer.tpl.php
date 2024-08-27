@@ -15,7 +15,7 @@
     <li><a href="<?= $router->generate('main-home');?>">Accueil</a></li>
     <li><a href="<?= $router->generate('main-about');?>">Qui suis-je ?</a></li>
     <li><a href="<?= $router->generate('posturologie');?>">La Posturologie</a></li>
-    <li><a href="<?= $router->generate('main-contact');?>">Infos Pratiques et Contact</a></li>
+    <li><a href="<?= $router->generate('main-infos-pratiques');?>">Infos Pratiques et Contact</a></li>
 </ul>
 <ul class="footer menu--articles appear">
     <strong> Articles </strong>

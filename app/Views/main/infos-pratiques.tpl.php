@@ -1,7 +1,7 @@
 <article> 
     <div class="article--text">
         <h2 class="article--title">
-        INFOS PRATIQUE
+        INFORMATIONS PRATIQUES
         </h2>
         <h3 class="article--subtitle">
             Contact :
@@ -43,6 +43,7 @@
     </div>
 </article>
 
-<?php 
+<?php /*
 require_once __DIR__ . '\form.tpl.php'
+*/
 ?>

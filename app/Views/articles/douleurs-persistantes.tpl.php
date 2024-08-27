@@ -1,7 +1,7 @@
 <article> 
     <img class="article--picture" src="images/douleurs-persistantes.png" alt="douleurs persistantes" />
     <h2 class="article--title">
-    Avez-vous déjà ressenti ces <mark> douleurs tenaces </mark>, difficiles à expliquer et qui reviennent sans cesse ? 
+    Avez-vous déjà ressenti ces <strong> douleurs tenaces </strong>, difficiles à expliquer et qui reviennent sans cesse ? 
     </h2>
     <p class="article--text"> 
     Vous avez peut-être essayé différentes disciplines médicales, mais les symptômes persistent et aucune solution durable n'a été trouvée. Ou peut-être vous êtes-vous déjà demandé pourquoi votre ostéopathe revient toujours à la même manipulation : le bassin qui se vrille, la vertèbre qui se bloque... ? </br>

@@ -86,8 +86,12 @@ ul {
   font-size: x-large;
   font-weight: 500;
   text-decoration: none;
-  padding: 1rem;
+  padding: 2rem 1rem;
   position: relative;
+}
+
+.nav--menu__link-article {
+  margin-bottom: 1rem;
 }
 
 .nav-menu__link-list-title{
@@ -98,7 +102,7 @@ ul {
 .nav--menu__link-article a:hover {
   background-color: var(--color-light);
   color: var(--color-dark-txt);
-  padding: 0.1rem;
+  padding: 0.1rem 1rem;
   border-radius: 2rem;
 }
 .nav--menu {

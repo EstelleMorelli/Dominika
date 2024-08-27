@@ -10,7 +10,7 @@ class CoreController
     public function __construct($router, $match)
     {
         $this->router = $router;
-
+/*
         $routeName = $match['name'];
         // On définit la liste des permissions pour les routes nécessitant une connexion utilisateur
         $acl = [
@@ -29,9 +29,10 @@ class CoreController
 
             // Puis on utilie la méthode checkAuthorization($roles) pour vérifier les permissions
             $this->checkAuthorization($authorizedRoles);
-        }
+        }*/
         
     }
+
     /**
      * Méthode permettant d'afficher du code HTML en se basant sur les views
      *

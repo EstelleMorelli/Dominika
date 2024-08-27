@@ -11,10 +11,10 @@
 <img class="mindmapimg" src="images/mindmap.png" alt="Image" usemap="#cerclesMap">
 
 <div alt="Hernie discale" class="circle" style="top: 2%; left: 23.9%; width: 21%; height: 22%;" onclick="window.location.href='<?= $router->generate('hernie-discale');?>'"></div>
-<div alt="Difficultés scolaires" class="circle" style="top: 5%; left: 65.2%; width: 24%; height: 25.5%;" onclick="window.location.href='<?= $router->generate('difficultes-scolaires');?>'"></div>
+<div alt="Difficultés scolaires" class="circle" style="top: 5%; left: 65.5%; width: 24%; height: 25.5%;" onclick="window.location.href='<?= $router->generate('difficultes-scolaires');?>'"></div>
 <div alt="Posturologie" class="circle" style="top: 31%; left: 32.2%; width: 35.5%; height: 38%;" onclick="window.location.href='<?= $router->generate('posturologie');?>'"></div>
-<div alt="Maux de tête" class="circle" style="top: 39%; left: 7%; width: 21%; height: 22%;" onclick="window.location.href='<?= $router->generate('maux-de-tete');?>'"></div>
-<div alt="Performance" class="circle" style="top: 75%; left: 7.6%; width: 21%; height: 22%;" onclick="window.location.href='<?= $router->generate('douleurs-persistantes');?>'"></div>
-<div alt="Douleur persistante" class="circle" style="top: 64%; left: 72.2%; width: 21%; height: 22%;" onclick="window.location.href='<?= $router->generate('performance');?>'"></div>
+<div alt="Maux de tête" class="circle" style="top: 39%; left: 6.5%; width: 21%; height: 22%;" onclick="window.location.href='<?= $router->generate('maux-de-tete');?>'"></div>
+<div alt="Performance" class="circle" style="top: 75%; left: 7.1%; width: 21%; height: 22%;" onclick="window.location.href='<?= $router->generate('performance');?>'"></div>
+<div alt="Douleur persistante" class="circle" style="top: 64%; left: 73%; width: 21%; height: 22%;" onclick="window.location.href='<?= $router->generate('douleurs-persistantes');?>'"></div>
 
 </div>

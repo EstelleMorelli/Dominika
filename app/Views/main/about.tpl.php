@@ -21,7 +21,7 @@ Aujourd’hui, je vais donc continuer à faire bouger des personnes, mais pas n�
 </p>
 <p class="article--text">
 
-Un public qui me tient particulièrement à cœur, ce sont les enfants. Ils sont les plus touchés par les évolutions rapides de notre environnement. De plus en plus d'entre eux sont étiquetés comme hyperactifs ou présentent des troubles "dys".  Naturelment, on cherche à remédier à ces problèmes par le biais de l'orthophonie, mais on oublie que le mouvement est fondamental pour le développement de l'être humain et pour l'accès à son potentiel cognitif. Le lien entre le mouvement, la posture et la cognition reste largement méconnu. Les orthophonistes sont débordés, alors qu'il y a tant à faire par le mouvement pour aider ces enfants. 
+Un public qui me tient particulièrement à cœur, ce sont les enfants. Ils sont les plus touchés par les évolutions rapides de notre environnement. De plus en plus d'entre eux sont étiquetés comme hyperactifs ou présentent des troubles "dys".  Naturellement, on cherche à remédier à ces problèmes par le biais de l'orthophonie, mais on oublie que le mouvement est fondamental pour le développement de l'être humain et pour l'accès à son potentiel cognitif. Le lien entre le mouvement, la posture et la cognition reste largement méconnu. Les orthophonistes sont débordés, alors qu'il y a tant à faire par le mouvement pour aider ces enfants. 
 </p>
 <p class="article--text">
 
