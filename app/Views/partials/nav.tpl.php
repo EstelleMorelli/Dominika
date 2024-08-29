@@ -18,13 +18,15 @@
       <li class="nav--menu__link"><a href="<?= $router->generate('main-about');?>">Qui suis-je ?</a></li>
       <li class="nav--menu__link"><a href="<?= $router->generate('posturologie');?>">La Posturologie</a></li>
       <ul class="nav--menu__link-list-articles">
-      <div class="nav-menu__link-list-title"> <strong> Articles </strong></div>
+      <div class="nav-menu__link-list-title"> Articles </div>
+      <div class="nav-menu__link-list-content">
       <li class="nav--menu__link-article"><a href="<?= $router->generate('difficultes-scolaires');?>">Problèmes d'apprentissage</a></li>
       <li class="nav--menu__link-article"><a href="<?= $router->generate('douleurs-persistantes');?>">Douleurs peristantes</a></li>
       <li class="nav--menu__link-article"><a href="<?= $router->generate('hernie-discale');?>">Prévention des blessures</a></li>
       <li class="nav--menu__link-article"><a href="<?= $router->generate('performance');?>">Potentiel de performance</a></li>
       <li class="nav--menu__link-article"><a href="<?= $router->generate('coaching');?>">Coaching sportif</a></li>
       <li class="nav--menu__link-article"><a href="<?= $router->generate('maux-de-tete');?>">Maux de tête & vertiges</a></li>
+</div>
       </ul>
       <li class="nav--menu__link last"><a href="<?= $router->generate('main-infos-pratiques');?>">Infos pratiques</a></li>
     </ul>
