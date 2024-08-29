@@ -1,5 +1,6 @@
 <article> 
       <img class="article--picture" src="images/difficultes-scolaires.jpg" alt="difficultes scolaires"/>
+      <div class="article--titleandtext">
     <h2 class="article--title">
     Saviez-vous que la motricité est cruciale pour le développement cérébral de votre enfant ? 
     </h2>
@@ -8,4 +9,5 @@
     En travaillant sur les patrons moteurs et en intégrant les réflexes archaïques, l'enfant améliore l'accès à son cerveau supérieur et peut ensuite explorer pleinement son potentiel.   </br>
     Un déséquilibre musculaire oculaire (différent des problèmes ophtalmologiques) peut aussi entraîner des difficultés de lecture, de copie et de concentration. Grâce à la posturologie, ces problèmes peuvent être identifiés et corrigés, améliorant ainsi les performances scolaires et le bien-être global des enfants. </br>
     </p>
+</div>
 </article>

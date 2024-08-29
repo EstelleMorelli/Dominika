@@ -1,5 +1,6 @@
 .footer {
-    background-color: var(--color-light);
+    /*background-color: var(--color-light);*/
+    background-color: rgba(224, 204, 190, 0.3);
     color: var(--color-dark-txt);
     margin: 0.5rem;
     padding: 1rem;
@@ -9,6 +10,12 @@
 
 footer a {
     text-decoration: none;
+}
+.footer a:hover{
+    background-color: var(--color-bg);
+    padding: 0.1rem;
+    border-radius: 2rem;
+    font-weight: bolder;
 }
 footer ul {
     list-style-type: none;

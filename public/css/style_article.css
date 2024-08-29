@@ -54,7 +54,7 @@ border-radius: 5rem;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
     text-align: justify;
-    padding: 1rem 2rem;
+    padding: 1rem;
   }
 }
 article {
@@ -82,8 +82,9 @@ article {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
-  padding: 0.5rem 1rem 1.5rem 1rem;
+  padding: 1rem;
   text-align: justify;
+  margin: 0;
 }
 
 
@@ -102,6 +103,26 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
+  article {
+    font-size: large;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+  }
+  .personnal-presentation{
+    flex-direction: column;
+    width: 50vw;
+  }
+  .personnal-presentation img{
+    align-self: center;
+  }
+  .article--titleandtext{
+    flex-direction: column;
+  }
+  .article--picture{
+    width: 25rem;
+    object-fit: cover;
+  }
   .about {
     border-radius: 2rem;
     background-color: var(--color-light);

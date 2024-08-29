@@ -1,5 +1,6 @@
 <article>
     <img class="article--picture" src="images/migraine.jpg" alt="maux de tete et vertiges" />
+    <div class="article--titleandtext">
     <h2 class="article--title">
     Maux de tête/ vertiges :
     </h2>
@@ -8,4 +9,5 @@
 La posturologie offre une approche non-invasive pour évaluer et corriger ces déséquilibres, offrant ainsi une solution efficace et durable. Explorez cette connexion pour un mieux-être global. </br>
 
     </p>
+</div>
 </article>
