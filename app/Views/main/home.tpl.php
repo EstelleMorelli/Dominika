@@ -1,8 +1,9 @@
 
 <div class="about home">
-
-    <h1 class="about title"> Dominika Meno, Coach Sportif - Posturologue </h1>
+    <div class="about titleandintro">
+<h1 class="about title"> Dominika Meno, Coach Sportif - Posturologue </h1>
 <p class="about intro">Depuis 2013, j'ai le bonheur d'accompagner les autres à travers le mouvement pour les aider à se sentir mieux, tant physiquement que mentalement. Dès le début, j'ai été captivé par l'impact positif que l'exercice peut avoir sur le bien-être général, la prise de confiance et la diminution du stress...  </p> 
+</div>
 <img class="about photo" src="images/PP.jpg" alt="Dominika Meno">
 <a class="readmore" href="<?= $router->generate('main-about');?>"> > Lire la suite </a>
 </div>

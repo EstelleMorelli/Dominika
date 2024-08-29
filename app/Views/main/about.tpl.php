@@ -1,5 +1,5 @@
 <article> 
-  <img class="article--picture" src="images/PPlogo.jpg" alt="coaching"/>
+  <img class="article--picture" src="images/PPlogo.jpg" alt="Dominika Meno"/>
   <h2 class="article--title">
     Présentation personnelle :
   </h2>
