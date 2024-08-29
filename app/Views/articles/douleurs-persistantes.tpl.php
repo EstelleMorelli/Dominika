@@ -1,5 +1,6 @@
 <article> 
     <img class="article--picture" src="images/douleurs-persistantes.png" alt="douleurs persistantes" />
+    <div class="article--titleandtext">
     <h2 class="article--title">
     Avez-vous déjà ressenti ces <strong> douleurs tenaces </strong>, difficiles à expliquer et qui reviennent sans cesse ? 
     </h2>
@@ -8,5 +9,6 @@
 Peut-être est-il temps de changer d'approche et de regarder le corps dans sa globalité. Après tout, c'est ainsi que fonctionne notre corps : comme un système interconnecté où chaque élément influence les autres. </br>
 
     </p>
+</div>
 </article>
 

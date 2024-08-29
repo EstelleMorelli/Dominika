@@ -13,6 +13,21 @@
     cursor: pointer; /* Curseur de type main pour indiquer l'interactivité */
     transition: box-shadow 0.3s ease; /* Animation pour l'effet d'ombre */
   }
+  .circle:hover:after,
+  .circle:focus:after{
+    content: "Lire l'article";  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); /* on centre horizontalement  */
+    z-index: 1; /* pour s'afficher au dessus des éléments en position relative */
+    white-space: nowrap;  /* on interdit le retour à la ligne*/
+    padding: 5px 14px;
+    background: #413219;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.2rem;
+  }
   
   /* Effet d'ombre au survol */
   .circle:hover {
