@@ -119,7 +119,9 @@ a {
     font-family: var(--font-secondary-title);
     font-weight: bold;
 }
-
+.contact-btn-container{
+  text-align: center;
+}
 @media screen and (min-width: 1024px) {
   article {
     font-size: large;
