@@ -1,5 +1,5 @@
 <article> 
-    <img class="article--picture" src="images/performance.jpg" alt="performance" />
+    <img class="article--picture" src="images/performance.webp" alt="performance" />
     <div class="article--titleandtext">
     <h2 class="article--title">
     Vous cherchez à améliorer votre performance physique et à réduire les risques de blessures ?

@@ -27,7 +27,7 @@ class ArticlesController extends CoreController
      * Méthode s'occupant de l'affichage
      * @return void
      */
-    public function douleursPeristantes()
+    public function douleursPersistantes()
     {
         $this->show('articles/douleurs-persistantes');
     }

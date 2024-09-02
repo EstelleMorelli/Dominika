@@ -21,7 +21,7 @@
       <div class="nav-menu__link-list-title"> Articles </div>
       <div class="nav-menu__link-list-content">
       <li class="nav--menu__link-article"><a href="<?= $router->generate('difficultes-scolaires');?>">Problèmes d'apprentissage</a></li>
-      <li class="nav--menu__link-article"><a href="<?= $router->generate('douleurs-persistantes');?>">Douleurs peristantes</a></li>
+      <li class="nav--menu__link-article"><a href="<?= $router->generate('douleurs-persistantes');?>">Douleurs persistantes</a></li>
       <li class="nav--menu__link-article"><a href="<?= $router->generate('hernie-discale');?>">Prévention des blessures</a></li>
       <li class="nav--menu__link-article"><a href="<?= $router->generate('performance');?>">Potentiel de performance</a></li>
       <li class="nav--menu__link-article"><a href="<?= $router->generate('coaching');?>">Coaching sportif</a></li>

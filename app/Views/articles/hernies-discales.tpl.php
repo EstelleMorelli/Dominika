@@ -1,5 +1,5 @@
 <article> 
-    <img class="article--picture" src="images/hernie-discale.png" alt="hernie discale" />
+    <img class="article--picture" src="images/hernie-discale.webp" alt="hernie discale" />
     <div class="article--titleandtext">
     <h2 class="article--title">
   Hernie discale :
