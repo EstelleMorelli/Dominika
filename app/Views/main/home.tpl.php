@@ -19,4 +19,6 @@
 <div alt="Douleur persistante" class="circle" style="top: 62%; left: 70.5%; width: 19%; height: 20.5%;" onclick="window.location.href='<?= $router->generate('douleurs-persistantes');?>'"></div>
 
 </div>
+<div class="contact-btn-container">
 <a href="mailto:contact@dominika-meno.fr" class="contact-btn"> Je veux faire mon bilan postural </a>
+</div>
