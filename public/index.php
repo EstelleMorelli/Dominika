@@ -56,7 +56,7 @@ $router->map(
     'GET',
     '/douleurs-persistantes',
     [
-        'method' => 'douleursPeristantes',
+        'method' => 'douleursPersistantes',
         'controller' => '\App\Controllers\ArticlesController' 
     ],
     'douleurs-persistantes'

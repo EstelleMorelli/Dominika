@@ -1,5 +1,5 @@
 <article class="personnal-presentation"> 
-  <img class="article--picture" src="images/PPlogo.jpg" alt="Dominika Meno"/>
+  <img class="article--picture" src="images/PPlogo.webp" alt="Dominika Meno"/>
   <h2 class="article--title">
     Présentation personnelle :
   </h2>
