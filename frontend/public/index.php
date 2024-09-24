@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../vendor/autoload.php';
-//session_start();
+session_start();
 
 $router = new AltoRouter();
 
@@ -133,6 +133,16 @@ $router->map(
         'controller' => '\App\Controllers\MainController' 
     ],
     'main-infos-pratiques'
+);
+
+$router->map(
+    'GET',
+    '/logout',
+    [
+        'method' => 'logout',
+        'controller' => '\App\Controllers\AdminController' 
+    ],
+    'admin-logout'
 );
 
 $router->map(

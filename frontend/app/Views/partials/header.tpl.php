@@ -20,3 +20,15 @@
     </head>
 
 <body>
+
+<?php 
+
+if (isset($_SESSION['firstname'])) {
+    echo 'Bonjour ' . $_SESSION['firstname'];
+    ?>
+    <form action="/logout" method="GET">
+        <button type="submit">Se déconnecter</button>
+    </form>
+    <?php
+}
+?>

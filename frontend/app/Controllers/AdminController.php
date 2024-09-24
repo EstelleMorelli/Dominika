@@ -14,6 +14,22 @@ class AdminController extends CoreController
         $this->show('main/login');
     }
 
+        /**
+     * Méthode s'occupant de la déconnection de l' utilisateur administrateur
+     *
+     * @return void
+     */
+    public function logout()
+    {
+        // Détruire la session pour déconnecter l'utilisateur
+        session_unset(); // Effacer toutes les variables de session
+        session_destroy(); // Détruire la session
+
+        // Rediriger vers la page de login (ou autre page)
+        header('Location: /admin');
+        exit;
+    }
+
     public function loginPost()
     {
         $email = filter_input(INPUT_POST, 'email');
@@ -49,9 +65,9 @@ class AdminController extends CoreController
     
         // Si le succès est vrai, rediriger
         if ($result['success']) {
-            // Redirection seulement si aucun contenu n'a encore été envoyé
-            echo "Bienvenue ". $result['data'];
-            // header('Location: /accueil');
+            $_SESSION['firstname']=$result['data'];
+            // Redirection 
+            header('Location: /accueil');
             // exit; // Assurez-vous de quitter le script après la redirection
         } else {
             // Échec de la connexion, afficher un message

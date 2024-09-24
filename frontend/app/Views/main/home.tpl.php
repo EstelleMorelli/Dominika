@@ -1,4 +1,3 @@
-
 <div class="about home">
     <div class="about titleandintro">
 <h1 class="about title"> Dominika Meno, Coach Sportif - Posturologue </h1>
