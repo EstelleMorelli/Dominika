@@ -43,6 +43,15 @@ $router->map(
     ],
     'main-about'
 );
+
+$router->map(
+    'GET',
+    '/articles/[i:articleId]',
+    [
+        'method' => 'articleDetail',
+        'controller' => '\App\Controllers\ArticlesController' 
+    ],
+);
 $router->map(
     'GET',
     '/coaching',

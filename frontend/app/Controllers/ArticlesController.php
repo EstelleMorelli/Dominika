@@ -4,6 +4,28 @@ namespace App\Controllers;
 
 class ArticlesController extends CoreController
 {
+
+            /**
+     * Méthode s'occupant de l'affichage 
+     *
+     * @return void
+     */
+    public function articleDetail($articleId)
+    {
+        $urlAPI = "http://127.0.0.1:8000/api/articles/{$articleId}";
+        $ch = curl_init($urlAPI);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'Content-Type: application/json'
+        ]);
+        $response = curl_exec($ch);
+        curl_close($ch);
+        $response = trim($response);
+
+        // Décodage de la réponse JSON
+        $result = json_decode($response, true);      
+        $this->show('articles/coaching', ['articleTitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
+    }
         /**
      * Méthode s'occupant de l'affichage 
      *
@@ -23,7 +45,7 @@ class ArticlesController extends CoreController
 
         // Décodage de la réponse JSON
         $result = json_decode($response, true);      
-        $this->show('articles/coaching', ['articleTitle'=>$result['title'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
+        $this->show('articles/coaching', ['articleTitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
     }
         /**
      * Méthode s'occupant de l'affichage 

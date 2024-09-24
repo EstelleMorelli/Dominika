@@ -1,5 +1,5 @@
 <article> 
-      <img class="article--picture" src="images/coaching.jpg" alt="coaching"/>
+      <img class="article--picture" src="/../images/<?=$articlePicture?>" alt="coaching"/>
       <div class="article--titleandtext">
     <h2 class="article--title">
   <?= $articleTitle ?>
