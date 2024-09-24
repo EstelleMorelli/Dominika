@@ -1,4 +1,5 @@
     <script src="<?= $baseUri ?>scripts\script.js"></script>
+    <script src="<?= $baseUri ?>scripts\admin.js"></script>
 </body>
 <footer>
 <div class="footer adress appear">

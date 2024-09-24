@@ -134,6 +134,26 @@ $router->map(
     ],
     'main-infos-pratiques'
 );
+
+$router->map(
+    'GET',
+    '/admin',
+    [
+        'method' => 'login',
+        'controller' => '\App\Controllers\AdminController' 
+    ],
+    'admin-login-page'
+);
+
+$router->map(
+    'POST',
+    '/admin',
+    [
+        'method' => 'loginPost',
+        'controller' => '\App\Controllers\AdminController' 
+    ],
+    'login-post'
+);
 /* -------------
 --- DISPATCH ---
 --------------*/

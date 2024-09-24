@@ -40,4 +40,4 @@ Route::delete('/prices/{id}', [PriceController::class, 'delete'])->where('id', '
 
 Route::get('/admins', [AdminController::class, 'list']);
 
-Route::get('/admins/{email}', [AdminController::class, 'findByEmail'])->where('email', '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}');
+Route::post('/admins/{email}', [AdminController::class, 'findByEmail'])->where('email', '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}');
