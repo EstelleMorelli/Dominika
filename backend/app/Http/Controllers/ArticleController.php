@@ -45,6 +45,7 @@ class ArticleController extends Controller
         $subtitle = $request->input('subtitle');
         $content = $request->input('content');
         $picture = $request->input('picture');
+        $slug = $request->input('slug');
         // TODO : VERIFIER LES VALEURS
 
         // Création d'une nouvelle instance Article
@@ -54,6 +55,7 @@ class ArticleController extends Controller
         $article->subtitle = $subtitle;
         $article->content = $content;
         $article->picture = $picture;
+        $article->slug = $slug;
         // Gestion de la réponse HTTP
         if ($article->save()){
             return response()->json($article, Response::HTTP_CREATED);

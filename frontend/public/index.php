@@ -120,6 +120,26 @@ $router->map(
     ],
     'login-post'
 );
+
+$router->map(
+    'GET',
+    '/article/ajouter',
+    [
+        'method' => 'articleAdd',
+        'controller' => '\App\Controllers\ArticlesController' 
+    ],
+    'article-add'
+);
+
+$router->map(
+    'POST',
+    '/article/ajouter',
+    [
+        'method' => 'articleAddPost',
+        'controller' => '\App\Controllers\ArticlesController' 
+    ],
+    'article-add-post'
+);
 /* -------------
 --- DISPATCH ---
 --------------*/

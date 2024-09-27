@@ -22,7 +22,10 @@
       <div class="nav-menu__link-list-content">
       <?php foreach ($articlesList as $key => $currentArticle):?>
       <li class="nav--menu__link-article"><a href="<?= $router->generate('article-detail', ['articleSlug'=>$currentArticle['slug']]);?>"><?=$currentArticle['title']?></a></li>
-      <?php endforeach; ?>
+      <?php endforeach;
+      if (isset($_SESSION['firstname'])):?>
+      <li class="nav--menu__link-article addLink"><a href="<?= $router->generate('article-add');?>"> Ajouter un article </a></li>
+      <?php endif; ?>
       </div>
       </ul>
       <li class="nav--menu__link last"><a href="<?= $router->generate('main-infos-pratiques');?>">Infos pratiques</a></li>

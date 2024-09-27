@@ -100,6 +100,10 @@ ul {
   width: 2rem;
 }
 
+.addLink {
+  background-color: red;
+}
+
 @media screen and (max-width: 1024px) {
   .overlay-nav-mobile {
   position: fixed;
