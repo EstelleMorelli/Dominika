@@ -18,6 +18,8 @@ Route::get('/articles', [ArticleController::class, 'list']);
 
 Route::get('/articles/{id}', [ArticleController::class, 'find'])->where('id', '[0-9]+');
 
+Route::get('/articles/{slug}', [ArticleController::class, 'findBySlug'])->where('slug', '[a-zA-Z0-9-_\.]+');
+
 Route::post('/articles', [ArticleController::class, 'create']);
 
 Route::put('/articles/{id}', [ArticleController::class, 'update'])->where('id', '[0-9]+');

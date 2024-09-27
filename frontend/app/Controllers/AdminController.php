@@ -32,8 +32,8 @@ class AdminController extends CoreController
 
     public function loginPost()
     {
-        $email = filter_input(INPUT_POST, 'email');
-        $password = filter_input(INPUT_POST, 'password');
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password', FILTER_DEFAULT);
     
         $datas = [
             'email' => $email,

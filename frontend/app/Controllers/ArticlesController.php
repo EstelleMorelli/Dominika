@@ -10,9 +10,9 @@ class ArticlesController extends CoreController
      *
      * @return void
      */
-    public function articleDetail($articleId)
+    public function articleDetail($articleSlug)
     {
-        $urlAPI = "http://127.0.0.1:8000/api/articles/{$articleId}";
+        $urlAPI = "http://127.0.0.1:8000/api/articles/{$articleSlug}";
         $ch = curl_init($urlAPI);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
@@ -24,83 +24,60 @@ class ArticlesController extends CoreController
 
         // Décodage de la réponse JSON
         $result = json_decode($response, true);      
-        $this->show('articles/coaching', ['articleTitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
+        $this->show('articles/articles', ['articleId'=>$result['id'], 'articleTitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
     }
-        /**
+
+    /**
      * Méthode s'occupant de l'affichage 
      *
      * @return void
      */
-    public function coaching()
+    public function articleDetailUpdate($articleId)
     {
-        $urlAPI = "http://127.0.0.1:8000/api/articles/7";
+        $subtitle = filter_input(INPUT_POST, 'article--title', FILTER_SANITIZE_SPECIAL_CHARS);
+        $content = filter_input(INPUT_POST, 'article--text', FILTER_SANITIZE_SPECIAL_CHARS);
+        $datas = [
+            'subtitle' => $subtitle,
+            'content' => $content
+        ];
+        // Vérifier si le fichier image a été soumis
+        if (isset($_FILES['article--picture']) && $_FILES['article--picture']['error'] === UPLOAD_ERR_OK) {
+            // Informations sur le fichier
+            $fileTmpPath = $_FILES['article--picture']['tmp_name'];  // Chemin temporaire du fichier
+            $fileName = $_FILES['article--picture']['name'];         // Nom original du fichier
+            $fileSize = $_FILES['article--picture']['size'];         // Taille du fichier
+            $fileType = $_FILES['article--picture']['type'];         // Type MIME
+            $fileError = $_FILES['article--picture']['error'];       // Code d'erreur
+            // Définir le dossier de destination
+            $uploadDir = __DIR__ . '/../../public/images/';
+            // Créer un chemin complet de destination
+            $destinationPath = $uploadDir . basename($fileName);
+            // Déplacer le fichier de son emplacement temporaire vers la destination
+            if (move_uploaded_file($fileTmpPath, $destinationPath)) {
+                $datas['picture'] = $fileName; 
+                var_dump("Fichier téléchargé avec succès : " . $destinationPath);
+            } else {
+                var_dump("Une erreur est survenue lors du téléchargement du fichier.");
+            }
+        }
+       
+        $urlAPI = "http://127.0.0.1:8000/api/articles/$articleId";
+        $json_data = json_encode($datas);
+
         $ch = curl_init($urlAPI);
+
+        // On configure la requête cURL pour envoyer un
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json'
         ]);
         $response = curl_exec($ch);
         curl_close($ch);
         $response = trim($response);
-
         // Décodage de la réponse JSON
-        $result = json_decode($response, true);      
-        $this->show('articles/coaching', ['articleTitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
-    }
-        /**
-     * Méthode s'occupant de l'affichage 
-     *
-     * @return void
-     */
-    public function difficultesScolaires()
-    {
-        $this->show('articles/difficultes-scolaires');
-    }
-
-    /**
-     * Méthode s'occupant de l'affichage
-     * @return void
-     */
-    public function douleursPersistantes()
-    {
-        $this->show('articles/douleurs-persistantes');
-    }
-
-    /**
-     * Méthode s'occupant de l'affichage 
-     *
-     * @return void
-     */
-    public function hernieDiscale()
-    {
-        $this->show('articles/hernies-discales');
-    }
-
-     /**
-     * Méthode s'occupant de l'affichage 
-     *
-     * @return void
-     */
-    public function mauxTete()
-    {
-        $this->show('articles/maux-de-tete');
-    }
-         /**
-     * Méthode s'occupant de l'affichage 
-     *
-     * @return void
-     */
-    public function performance()
-    {
-        $this->show('articles/performance');
-    }
-         /**
-     * Méthode s'occupant de l'affichage 
-     *
-     * @return void
-     */
-    public function posturologie()
-    {
-        $this->show('articles/posturologie');
+        $result = json_decode($response, true);    
+        $this->show('articles/articles', ['articleTitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
     }
 }

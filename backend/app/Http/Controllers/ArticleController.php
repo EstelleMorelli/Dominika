@@ -25,6 +25,15 @@ class ArticleController extends Controller
         //Récupération de l'article en fonction de l'id
         return Article::findOrFail($id);
     }
+
+        /**
+     * Display the specified resource.
+     */
+    public function findBySlug(string $slug)
+    {
+        //Récupération de l'article en fonction de l'id
+        return Article::where('slug', $slug)->first();
+    }
     
     /**
      * Store a newly created resource in storage.
@@ -59,20 +68,25 @@ class ArticleController extends Controller
      */
     public function update(Request $request, int $id)
     {
-        // Extraction des valeurs passées dans le body de la requête
-        $title = $request->input('title');
-        $subtitle = $request->input('subtitle');
-        $content = $request->input('content');
-        $picture = $request->input('picture');
-        // TODO : VERIFIER LES VALEURS
-
         // Recherche de l'article en fonction de l'id
         $article= Article::findOrFail($id);
-        // Sauvegarde 
-        $article->title = $title;
-        $article->subtitle = $subtitle;
-        $article->content = $content;
-        $article->picture = $picture;
+         // Mise à jour conditionnelle des champs avec sécurisation
+        if ($request->has('title')) {
+        $article->title = htmlspecialchars($request->input('title'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
+        }
+        if ($request->has('subtitle')) {
+        $article->subtitle = htmlspecialchars($request->input('subtitle'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
+        }
+        if ($request->has('slug')) {
+            $article->slug = htmlspecialchars($request->input('slug'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
+            }
+        if ($request->has('content')) {
+        $article->content = htmlspecialchars($request->input('content'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
+        }
+        if ($request->has('picture')) {
+        // Validation URL déjà effectuée, pas besoin de nettoyage supplémentaire si l'URL est correcte
+        $article->picture = $request->input('picture');
+        }
         // Gestion de la réponse HTTP
         if ($article->save()){
             return response()->json($article);

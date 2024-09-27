@@ -46,75 +46,22 @@ $router->map(
 
 $router->map(
     'GET',
-    '/articles/[i:articleId]',
+    '/articles/[s:articleSlug]',
     [
         'method' => 'articleDetail',
         'controller' => '\App\Controllers\ArticlesController' 
     ],
-);
-$router->map(
-    'GET',
-    '/coaching',
-    [
-        'method' => 'coaching',
-        'controller' => '\App\Controllers\ArticlesController' 
-    ],
-    'coaching'
-);
-$router->map(
-    'GET',
-    '/douleurs-persistantes',
-    [
-        'method' => 'douleursPersistantes',
-        'controller' => '\App\Controllers\ArticlesController' 
-    ],
-    'douleurs-persistantes'
-);
-$router->map(
-    'GET',
-    '/difficultes-scolaires',
-    [
-        'method' => 'difficultesScolaires',
-        'controller' => '\App\Controllers\ArticlesController' 
-    ],
-    'difficultes-scolaires'
-);
-$router->map(
-    'GET',
-    '/hernie-discale',
-    [
-        'method' => 'hernieDiscale',
-        'controller' => '\App\Controllers\ArticlesController'
-    ],
-    'hernie-discale'
+    'article-detail'
 );
 
 $router->map(
-    'GET',
-    '/maux-de-tete',
+    'POST',
+    '/articles/[s:articleSlug]',
     [
-        'method' => 'mauxTete',
+        'method' => 'articleDetailUpdate',
         'controller' => '\App\Controllers\ArticlesController' 
     ],
-    'maux-de-tete'
-);
-$router->map(
-    'GET',
-    '/performance',
-    [
-        'method' => 'performance',
-        'controller' => '\App\Controllers\ArticlesController' 
-    ],
-    'performance'
-);
-$router->map(
-    'GET',
-    '/posturologie',
-    [
-        'method' => 'posturologie',
-        'controller' => '\App\Controllers\ArticlesController'
-    ],
-    'posturologie'
+    'article-detail-update'
 );
 $router->map(
     'GET',

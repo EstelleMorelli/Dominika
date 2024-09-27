@@ -1,0 +1,2 @@
+-> faire un template générique pour les articles et le renommer dans le fonction show du ArticlesController
+-> faire le crud des articles quand on est connecté ($_session qui possede un firstname)
