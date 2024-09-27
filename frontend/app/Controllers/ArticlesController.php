@@ -34,6 +34,7 @@ class ArticlesController extends CoreController
      */
     public function articleDetailUpdate($articleId)
     {
+        $actionMsg = "";
         $subtitle = filter_input(INPUT_POST, 'article--title', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = filter_input(INPUT_POST, 'article--text', FILTER_SANITIZE_SPECIAL_CHARS);
         $datas = [
@@ -55,9 +56,9 @@ class ArticlesController extends CoreController
             // Déplacer le fichier de son emplacement temporaire vers la destination
             if (move_uploaded_file($fileTmpPath, $destinationPath)) {
                 $datas['picture'] = $fileName; 
-                var_dump("Fichier téléchargé avec succès : " . $destinationPath);
+                $actionMsg = "Fichier téléchargé avec succès ! ";
             } else {
-                var_dump("Une erreur est survenue lors du téléchargement du fichier.");
+                $actionMsg = "Une erreur est survenue lors du téléchargement du fichier.";
             }
         }
        
@@ -65,7 +66,6 @@ class ArticlesController extends CoreController
         $json_data = json_encode($datas);
 
         $ch = curl_init($urlAPI);
-
         // On configure la requête cURL pour envoyer un
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
@@ -78,6 +78,6 @@ class ArticlesController extends CoreController
         $response = trim($response);
         // Décodage de la réponse JSON
         $result = json_decode($response, true);    
-        $this->show('articles/articles', ['articleTitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
+        $this->show('articles/articles', ['actionMsg'=>$actionMsg, 'articleTitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
     }
 }

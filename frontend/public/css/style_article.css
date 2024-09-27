@@ -8,7 +8,29 @@
     scale: 1;
   } 
 }
-
+.article--update label{
+  padding: 2rem;
+}
+.article--update input{
+  width: 98%;
+  margin: 1%;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: larger;
+  font-family: var(--font-basic-txt);
+}
+textarea {
+  width: 98%; /* Adapte la largeur à 98% du parent */
+  max-width: 100%; /* Empêche de dépasser la taille du conteneur parent */
+  min-width: 300px; /* Largeur minimale pour une meilleure lisibilité */
+  height: 250px; /* Hauteur par défaut */
+  box-sizing: border-box; /* Pour inclure le padding dans les dimensions */
+  padding: 1rem;
+  margin: 1%;
+  font-size: larger;
+  border-radius: 1rem;
+  font-family: var(--font-basic-txt);
+}
 .readmore {
 background-color: var(--color-bg);
 border: solid var(--color-dark-txt); 
