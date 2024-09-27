@@ -20,12 +20,9 @@
       <ul class="nav--menu__link-list-articles">
       <div class="nav-menu__link-list-title"> Articles </div>
       <div class="nav-menu__link-list-content">
-      <li class="nav--menu__link-article"><a href="<?= $router->generate('article-detail', ['articleSlug'=>"difficultes-scolaires"]);?>">Problèmes d'apprentissage</a></li>
-      <li class="nav--menu__link-article"><a href="<?= $router->generate('article-detail', ['articleSlug'=>"douleurs-persistantes"]);?>">Douleurs persistantes</a></li>
-      <li class="nav--menu__link-article"><a href="<?= $router->generate('article-detail', ['articleSlug'=>"hernie-discale"]);?>">Hernie Discale</a></li>
-      <li class="nav--menu__link-article"><a href="<?= $router->generate('article-detail', ['articleSlug'=>"performance"]);?>">Potentiel de performance</a></li>
-      <li class="nav--menu__link-article"><a href="<?= $router->generate('article-detail', ['articleSlug'=>"coaching"]);?>">Coaching sportif</a></li>
-      <li class="nav--menu__link-article"><a href="<?= $router->generate('article-detail', ['articleSlug'=>"maux-de-tete"]);?>">Maux de tête & vertiges</a></li>
+      <?php foreach ($articlesList as $key => $currentArticle):?>
+      <li class="nav--menu__link-article"><a href="<?= $router->generate('article-detail', ['articleSlug'=>$currentArticle['slug']]);?>"><?=$currentArticle['title']?></a></li>
+      <?php endforeach; ?>
       </div>
       </ul>
       <li class="nav--menu__link last"><a href="<?= $router->generate('main-infos-pratiques');?>">Infos pratiques</a></li>

@@ -162,7 +162,7 @@ a {
     flex-direction: column;
   }
   .article--picture{
-    width: 25rem;
+    width: 50rem;
     object-fit: cover;
   }
   .about {

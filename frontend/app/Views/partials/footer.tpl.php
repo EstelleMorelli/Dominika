@@ -12,19 +12,16 @@
     <ul>
     <li><a href="<?= $router->generate('main-home');?>">Accueil</a></li>
     <li><a href="<?= $router->generate('main-about');?>">Qui suis-je ?</a></li>
-    <li><a href="<?= $router->generate('posturologie');?>">La Posturologie</a></li>
+    <li><a href="<?= $router->generate('article-detail', ['articleSlug'=>"posturologie"]);?>">La Posturologie</a></li>
     <li><a href="<?= $router->generate('main-infos-pratiques');?>">Infos Pratiques et Contact</a></li>
     </ul>
 </div>
 <div class="footer menu--articles appear">
     <strong> Articles </strong>
     <ul>
-    <li class="menu-item"><a href="<?= $router->generate('difficultes-scolaires');?>">Problèmes d'apprentissage</a></li>
-    <li class="menu-item"><a href="<?= $router->generate('douleurs-persistantes');?>">Douleurs persistantes</a></li>
-    <li class="menu-item"><a href="<?= $router->generate('hernie-discale');?>">Prévention des blessures</a></li>
-    <li class="menu-item"><a href="<?= $router->generate('performance');?>">Potentiel de performance</a></li>
-    <li class="menu-item"><a href="<?= $router->generate('coaching');?>">Coaching sportif</a></li>
-    <li class="menu-item"><a href="<?= $router->generate('maux-de-tete');?>">Maux de tête & vertiges</a></li>
+    <?php foreach ($articlesList as $key => $currentArticle):?>
+      <li class="menu--item"><a href="<?= $router->generate('article-detail', ['articleSlug'=>$currentArticle['slug']]);?>"><?=$currentArticle['title']?></a></li>
+      <?php endforeach; ?>
     </ul>
 </div>
 <div class="footer developer">

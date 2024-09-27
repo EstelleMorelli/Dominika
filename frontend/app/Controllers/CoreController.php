@@ -65,6 +65,19 @@ class CoreController
         // $viewData est disponible dans chaque fichier de vue
 
 
+        //récupération de la liste des articles pour la nav
+        $urlAPI = "http://127.0.0.1:8000/api/articles";
+        $ch = curl_init($urlAPI);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'Content-Type: application/json'
+        ]);
+        $response = curl_exec($ch);
+        curl_close($ch);
+        $response = trim($response);
+
+        // Décodage de la réponse JSON
+        $articlesList = json_decode($response, true);
 
         require_once __DIR__ . '/../Views/partials/header.tpl.php';
         require_once __DIR__ . '/../Views/partials/nav.tpl.php';
