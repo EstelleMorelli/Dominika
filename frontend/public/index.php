@@ -140,6 +140,16 @@ $router->map(
     ],
     'article-add-post'
 );
+
+$router->map(
+    'GET',
+    '/article/delete/[i:articleId]',
+    [
+        'method' => 'articleDelete',
+        'controller' => '\App\Controllers\ArticlesController' 
+    ],
+    'article-delete'
+);
 /* -------------
 --- DISPATCH ---
 --------------*/

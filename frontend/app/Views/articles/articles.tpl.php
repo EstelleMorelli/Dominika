@@ -20,7 +20,11 @@ if (isset($_SESSION['firstname'])){
     <label for="article--text">Texte de l'article:</label>
     <textarea id="article--text" name="article--text" required minlength="1" maxlength="65000"> <?= htmlspecialchars_decode($articleContent) ?> </textarea>
     <button type="submit">Valider</button>
-    </form> 
+    </form>
+    <?php
+    if (isset($_SESSION['firstname']) && isset($articleId)):?>
+      <a class="nav--menu__link-article addLink" href="<?= $router->generate('article-delete', ['articleId'=>$articleId]);?>"> Supprimer cet article </a>
+      <?php endif; ?> 
 </div>
   </article>
   <?php

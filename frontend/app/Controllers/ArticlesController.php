@@ -161,4 +161,27 @@ class ArticlesController extends CoreController
         // Retourner la chaîne modifiée
         return $string;
     }
+
+                /**
+     * Méthode s'occupant de la suppression d'un article 
+     *
+     * @return void
+     */
+    public function articleDelete($articleId)
+    {
+        var_dump($articleId);
+        //$urlAPI = "http://127.0.0.1:8000/api/articles/{$articleId}";
+        //$ch = curl_init($urlAPI);
+        //curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        //curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        //    'Content-Type: application/json'
+        //]);
+        //$response = curl_exec($ch);
+        //curl_close($ch);
+        //$response = trim($response);
+
+        // Décodage de la réponse JSON
+        //$result = json_decode($response, true);      
+        //$this->show('articles/articles', ['articleId'=>$result['id'], 'articleTitle'=>$result['title'],'articleSubtitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
+    }
 }
