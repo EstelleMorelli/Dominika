@@ -1,2 +1,1 @@
--> faire un template générique pour les articles et le renommer dans le fonction show du ArticlesController
--> faire le crud des articles quand on est connecté ($_session qui possede un firstname)
+-> faire la fonction articleDelete pour supprimer un article en fonction de son id (ou de son slug?)

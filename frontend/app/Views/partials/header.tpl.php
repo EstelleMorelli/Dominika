@@ -31,4 +31,9 @@ if (isset($_SESSION['firstname'])) {
     </form>
     <?php
 }
+
+if (isset($actionMsg) && $actionMsg != "") {
+    // Injection de la variable PHP dans le script JavaScript
+    echo '<script>window.alert("' . addslashes($actionMsg) . '")</script>'; 
+}
 ?>

@@ -1,8 +1,4 @@
 <?php 
-if (isset($actionMsg) && $actionMsg!=""){
-  echo $actionMsg; 
-}
-
 if (isset($_SESSION['firstname'])){
   ?> 
   <article>
