@@ -101,7 +101,7 @@ ul {
 }
 
 .addLink {
-  background-color: red;
+  background-color: rgb(41, 83, 41);
 }
 
 @media screen and (max-width: 1024px) {

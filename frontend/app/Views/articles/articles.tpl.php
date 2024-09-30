@@ -19,7 +19,7 @@ if (isset($_SESSION['firstname'])){
     </form>
     <?php
     if (isset($_SESSION['firstname']) && isset($articleId)):?>
-      <a class="nav--menu__link-article addLink" href="<?= $router->generate('article-delete', ['articleId'=>$articleId]);?>"> Supprimer cet article </a>
+      <a class="nav--menu__link-article deleteLink" href="<?= $router->generate('article-delete', ['articleId'=>$articleId]);?>"> Supprimer cet article </a>
       <?php endif; ?> 
 </div>
   </article>
