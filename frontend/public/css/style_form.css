@@ -1,59 +1,67 @@
 
-.form__group {
-    display: block;
+.login--form__wrapper{
+    display: flex;
+    justify-content: center;
     align-items: center;
-  position: relative;
-  padding: 50px 0 0;
-  margin: auto;
-  width: 50%;
+    margin-top: 1rem;
 }
 
-.form__field {
-  font-family: inherit;
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid var(--color-bg);
-  outline: 0;
-  font-size: 1.7rem;
-  color: var(--color-light);
-  padding: 7px 0;
-  background: transparent;
-  transition: border-color 0.2s;
-
-  &:placeholder-shown ~ .form__label {
-    font-size: 2rem;
-    cursor: text;
-    top: 20px;
+.login--form {
+    background-color: white; /* Optionnel, pour le style */
+    padding: 1.25rem; /* 20px */
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 0 4px 8px */
   }
-}
-
-.form__label {
-  position: relative;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: var(--color-bg);
-  font-weight: bold;
-}
-
-.form__field:focus {
-  ~ .form__label {
-    position: relative;
-    top: 0;
+  
+  .login--form ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .login--form li {
+    margin-bottom: 0.9375rem; /* 15px */
+  }
+  
+  .login--form label {
+    margin-bottom: 0.3125rem; /* 5px */
+    margin-right: 0.5rem;
     display: block;
-    transition: 0.2s;
-    font-size: 1.7rem;
-    color: var(--color-dark-elem);
-    font-weight:700;    
+    white-space: nowrap;
   }
-  padding-bottom: 6px;  
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, #11998e,#38ef7d);
-  border-image-slice: 1;
-}
-/* reset input */
-.form__field{
-  &:required,&:invalid { box-shadow:none; }
-}
+  
+  .login--form__input {
+    width: 100%;
+    padding: 0.625rem; /* 10px */
+    border: 0.0625rem solid #ccc; /* 1px */
+    border-radius: 0.3125rem; /* 5px */
+  }
+  
+  button[type="submit"] {
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    background-color: var(--color-dark-txt);
+    color: white;
+    border: none;
+    border-radius: 0.3125rem; /* 5px */
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: var(--color-dark-elem);
+  }
+  
+  .checkbox--wrapper {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: 0.25rem; /* Espace de 0.25rem (4px) entre la checkbox et le label */
+  }
+  
+  /* Aligner la checkbox avec le label */
+  .login--form li {
+    display: flex;
+    align-items: center;
+  }
+  
+  #show-password {
+    margin-right: 0;
+  }

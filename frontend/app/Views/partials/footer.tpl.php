@@ -25,7 +25,8 @@
     </ul>
 </div>
 <div class="footer developer">
-<strong> Conception : </strong> <a href="mailto:dev.morelliestelle@gmail.com">Estelle MORELLI</a>
+<strong> Conception : </strong> <a href="mailto:dev.morelliestelle@gmail.com">Estelle MORELLI</a></br>
+<a href="<?= $router->generate('admin-login-page');?>">Espace Administrateur</a>
 </div>
 </footer>
 </html>
