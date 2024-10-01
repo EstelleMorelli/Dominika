@@ -32,6 +32,7 @@ class AdminController extends CoreController
 
     public function loginPost()
     {
+        require __DIR__ . '/../../public/api.php';
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_DEFAULT);
     
@@ -40,7 +41,7 @@ class AdminController extends CoreController
             'password' => $password
         ];
     
-        $urlAPI = "http://127.0.0.1:8000/api/admins/{$email}";
+        $urlAPI = "{$api_url}/admins/{$email}";
         $json_data = json_encode($datas);
     
         $ch = curl_init($urlAPI);

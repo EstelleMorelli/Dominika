@@ -4,6 +4,14 @@ RewriteRule ^(.*) - [E=BASE_URI:%1]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php [QSA,L]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Rediriger les requêtes vers le dossier backend
+    RewriteRule ^api/(.*)$ ../backend/$1 [L,QSA]
+    
+</IfModule>
+
 
 <FilesMatch "\.(css|scss|webp|js|png|jpg|jpeg|gif|svg)$">
     Header set Cache-Control "max-age=604800, must-revalidate"

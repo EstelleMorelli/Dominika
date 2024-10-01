@@ -12,7 +12,8 @@ class ArticlesController extends CoreController
      */
     public function articleDetail($articleSlug)
     {
-        $urlAPI = "http://127.0.0.1:8000/api/articles/{$articleSlug}";
+        require __DIR__ . '/../../public/api.php';
+        $urlAPI = "{$api_url}/articles/{$articleSlug}";
         $ch = curl_init($urlAPI);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
@@ -34,6 +35,7 @@ class ArticlesController extends CoreController
      */
     public function articleDetailUpdate($articleId)
     {
+        require __DIR__ . '/../../public/api.php';
         $actionMsg = "";
         $title = filter_input(INPUT_POST, 'article--title', FILTER_SANITIZE_SPECIAL_CHARS);
         $subtitle = filter_input(INPUT_POST, 'article--subtitle', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -64,7 +66,7 @@ class ArticlesController extends CoreController
             }
         }
        
-        $urlAPI = "http://127.0.0.1:8000/api/articles/$articleId";
+        $urlAPI = "{$api_url}/articles/$articleId";
         $json_data = json_encode($datas);
 
         $ch = curl_init($urlAPI);
@@ -100,6 +102,7 @@ class ArticlesController extends CoreController
      */
     public function articleAddPost()
     {
+        require __DIR__ . '/../../public/api.php';
         $title = filter_input(INPUT_POST, 'article--title', FILTER_SANITIZE_SPECIAL_CHARS);
         $subtitle = filter_input(INPUT_POST, 'article--subtitle', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = filter_input(INPUT_POST, 'article--text', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -131,7 +134,7 @@ class ArticlesController extends CoreController
             }
         }
        
-        $urlAPI = "http://127.0.0.1:8000/api/articles";
+        $urlAPI = "{$api_url}/articles";
         $json_data = json_encode($datas);
 
         $ch = curl_init($urlAPI);
@@ -147,8 +150,6 @@ class ArticlesController extends CoreController
         $response = trim($response);
         // Décodage de la réponse JSON
         $result = json_decode($response, true);
-        var_dump($response);
-        var_dump($result);    
         $this->show('articles/articles', ['actionMsg'=>$actionMsg, 'articleTitle'=>$result['title'],'articleSubtitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
     }
 
@@ -169,8 +170,9 @@ class ArticlesController extends CoreController
      */
     public function articleDelete($articleId)
     {
+        require __DIR__ . '/../../public/api.php';
         $actionMsg = "";
-        $urlAPI = "http://127.0.0.1:8000/api/articles/{$articleId}";
+        $urlAPI = "{$api_url}/articles/{$articleId}";
         $ch = curl_init($urlAPI);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
