@@ -7,7 +7,7 @@
         <meta property="og:title" content="Dominika Meno, Coach Sportif & Posturologue">
         <meta property="og:description" content="J'accompagne les autres à travers le mouvement pour les aider à se sentir mieux, tant physiquement que mentalement.">
         <title>DOMINIKA MENO</title>
-
+        <link rel="icon" type="image/png" href="<?= $baseUri ?>images/DominikaMenoPictogrammeSeul.png">
         <link rel="stylesheet" href="<?= $baseUri ?>css/style_colors.css">
         <link rel="stylesheet" href="<?= $baseUri ?>css/style_background.css">
         <link rel="stylesheet" href="<?= $baseUri ?>css/style_article.css">

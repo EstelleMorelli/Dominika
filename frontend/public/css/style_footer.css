@@ -12,7 +12,7 @@
 footer a {
     text-decoration: none;
 }
-.footer a:hover{
+.footer-nav:hover{
     background-color: var(--color-bg);
     padding: 0.1rem;
     border-radius: 2rem;
@@ -31,4 +31,8 @@ footer ul {
     display: block;
     max-width: 15rem;
     margin: 0 auto;
+}
+
+.socialmedia {
+    max-width: 4rem;
 }
