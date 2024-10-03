@@ -3,12 +3,12 @@
 <h1 class="about title"> Dominika Meno, Coach Sportif - Posturologue </h1>
 <p class="about intro">Depuis 2013, j'ai le bonheur d'accompagner les autres à travers le mouvement pour les aider à se sentir mieux, tant physiquement que mentalement. Dès le début, j'ai été captivé par l'impact positif que l'exercice peut avoir sur le bien-être général, la prise de confiance et la diminution du stress...  </p> 
 </div>
-<img class="about photo" src="images/PP.webp" alt="Dominika Meno">
+<img class="about photo" src="/../images/PP.webp" alt="Dominika Meno">
 <a class="readmore" href="<?= $router->generate('main-about');?>"> > Lire la suite </a>
 </div>
 
 <div class="mindmap--container" style="position: relative;">
-<img class="mindmapimg" src="images/mindmap.webp" alt="Image" usemap="#cerclesMap">
+<img class="mindmapimg" src="/../images/mindmap.webp" alt="Image" usemap="#cerclesMap">
 
 <div alt="Hernie discale" class="circle" style="top: 6.3%; left: 26.1%; width: 19%; height: 20.2%;" onclick="window.location.href='<?= $router->generate('article-detail', ['articleSlug'=>"hernie-discale"]);?>'"></div>
 <div alt="Difficultés scolaires" class="circle" style="top: 9%; left: 64%; width: 21.7%; height: 23.9%;" onclick="window.location.href='<?= $router->generate('article-detail', ['articleSlug'=>"difficultes-scolaires"]);?>'"></div>

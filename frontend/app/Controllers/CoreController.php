@@ -64,9 +64,9 @@ class CoreController
 
         // $viewData est disponible dans chaque fichier de vue
 
-
+        require __DIR__ . '/../../public/api.php';
         //récupération de la liste des articles pour la nav
-        $urlAPI = "http://127.0.0.1:8000/api/articles";
+        $urlAPI = "{$api_url}/articles";
         $ch = curl_init($urlAPI);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
