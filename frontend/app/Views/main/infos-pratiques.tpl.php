@@ -9,21 +9,83 @@
         <img src="images/phone.png" class="contact-logo"> <strong> 06.16.22.24.11 </strong> </br>
         <img src="images/email.png" class="contact-logo"> <a href="mailto:contact@dominika-meno.fr">contact@dominika-meno.fr</a>
     </div>
+</article>
+<section class="pricing-section"> 
+<article> 
     <div class="article--text">
-        <h3 class="article--subtitle">
-        Tarifs posturologie :
-        </h3>
-        <h4> Bilan postural (1h-1h30) :</h4> 65 euros
-        <h4>  Suivi postural (30min) :</h4>  30 euros
-        <h4> Tarifs coaching à domicile </h4> 
+        <h3 class="article--subtitle"> Tarifs posturologie : </h3>
+<?php
+    foreach($pricesList as $key => $currentPrice){
+        if (str_contains($currentPrice['title'], "postural")){
+            if (isset($_SESSION['firstname'])){ ?> 
+                <form action="<?="/prices/{$currentPrice['id']}"?>" method="POST" class="price-update-form">
+                <input type="text" id="price--title" name="price--title" required minlength="1" maxlength="50" size="15" value="<?= htmlspecialchars_decode($currentPrice['title']) ?>"/>
+                <input type="text" id="price--duration" name="price--duration" required minlength="1" maxlength="50" size="5" value="<?= htmlspecialchars_decode($currentPrice['duration']) ?>"/>
+                <input type="text" id="price--amount" name="price--amount" required minlength="1" maxlength="50" size="2" value="<?= htmlspecialchars_decode($currentPrice['amount']) ?>"/>
+                <input type="text" id="price--currency" name="price--currency" required minlength="1" maxlength="50" size="2" value="<?= htmlspecialchars_decode($currentPrice['currency']) ?>"/>
+                <button type="submit">Valider</button>
+                <a class="nav--menu__link-article deleteLink" href="<?= $router->generate('price-delete', ['priceId'=>$currentPrice['id']]);?>"> Supprimer ce tarif </a>
+                </form>
+            <?php } else { ?>
+                <h4><?=$currentPrice['title'].' ('.$currentPrice['duration'].') :';?></h4> <?=round($currentPrice['amount']) .' '. $currentPrice['currency'];?>
+            <?php }
+        }
+    }
+?>
+    </div>
+</article> 
+<article> 
+        <div class="article--text">
+        <h3 class="article--subtitle"> Tarifs coaching à domicile : </h3> 
         <ul>
-            <li> 1 séance : 60 euros </li>
-            <li> Suivi 6 séances : 350 euros  </li>
-            <li> Suivi 10 séances : 550 euros </li>
-            <li> 1 séance 2-3 personnes : 80 euros </li>
-        </ul>
-        </div>
-
+<?php
+    foreach($pricesList as $key => $currentPrice){
+        if (str_contains($currentPrice['title'], "coaching")){
+            if (isset($_SESSION['firstname'])){ ?> 
+                <form action="<?="/prices/{$currentPrice['id']}"?>" method="POST" class="price-update-form">
+                <input type="text" id="price--duration" name="price--duration" required minlength="1" maxlength="50" size="5" value="<?= htmlspecialchars_decode($currentPrice['duration']) ?>"/>
+                <input type="text" id="price--amount" name="price--amount" required minlength="1" maxlength="50" size="2" value="<?= htmlspecialchars_decode($currentPrice['amount']) ?>"/>
+                <input type="text" id="price--currency" name="price--currency" required minlength="1" maxlength="50" size="2" value="<?= htmlspecialchars_decode($currentPrice['currency']) ?>"/>
+                <button type="submit">Valider</button>
+                <a class="nav--menu__link-article deleteLink" href="<?= $router->generate('price-delete', ['priceId'=>$currentPrice['id']]);?>"> Supprimer ce tarif </a>
+                </form>
+            <?php } else { ?>
+                <li><?=$currentPrice['duration'].' : '. round($currentPrice['amount']) .' '. $currentPrice['currency'];?> </li>
+            <?php }
+        }
+    }
+?>
+    </ul>
+    </div>
+</article> 
+<article> 
+<?php
+    if (isset($_SESSION['firstname'])){ ?> 
+        <form action="<?="/price/ajouter"?>" method="POST" class="price-form">
+            <h2 class="form-title">Ajouter un nouveau tarif :</h2>
+            <div class="form-group">
+            <label for="price--title">Intitulé du tarif : </label>
+            <input type="text" id="price--title" name="price--title" required minlength="1" maxlength="50" size="15" placeholder="Bilan postural"/>
+            </div>
+            <div class="form-group">
+            <label for="price--duration">Durée associée :</label>
+            <input type="text" id="price--duration" name="price--duration" required minlength="1" maxlength="50" size="5" placeholder="1h"/>
+            </div>
+            <div class="form-group">
+            <label for="price--amount">Montant :</label>
+            <input type="text" id="price--amount" name="price--amount" required minlength="1" maxlength="50" size="2" placeholder="60.00"/>
+            </div>
+            <div class="form-group">
+            <label for="price--currency">Devise :</label>
+            <input type="text" id="price--currency" name="price--currency" required minlength="1" maxlength="50" size="2" placeholder="euros"/>
+            </div>
+            <button type="submit" class="submit-btn">Valider</button>
+        </form>
+    <?php }
+?>
+</article> 
+</section>
+<article> 
     <div class="article--text"> 
         <h3 class="article--subtitle"> Déroulement d’un <strong> bilan </strong> postural: </h3>
         <ul>

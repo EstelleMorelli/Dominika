@@ -86,7 +86,7 @@ $router->map(
     '/infos-pratiques',
     [
         'method' => 'infosPratiques',
-        'controller' => '\App\Controllers\MainController' 
+        'controller' => '\App\Controllers\PricesController' 
     ],
     'main-infos-pratiques'
 );
@@ -149,6 +149,36 @@ $router->map(
         'controller' => '\App\Controllers\ArticlesController' 
     ],
     'article-delete'
+);
+
+$router->map(
+    'POST',
+    '/prices/[i:priceId]',
+    [
+        'method' => 'priceUpdate',
+        'controller' => '\App\Controllers\PricesController' 
+    ],
+    'price-update-post'
+);
+
+$router->map(
+    'GET',
+    '/price/delete/[i:priceId]',
+    [
+        'method' => 'priceDelete',
+        'controller' => '\App\Controllers\PricesController' 
+    ],
+    'price-delete'
+);
+
+$router->map(
+    'POST',
+    '/price/ajouter',
+    [
+        'method' => 'priceAddPost',
+        'controller' => '\App\Controllers\PricesController' 
+    ],
+    'price-add-post'
 );
 /* -------------
 --- DISPATCH ---

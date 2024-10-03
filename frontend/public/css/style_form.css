@@ -66,3 +66,63 @@
     margin-right: 0;
   }
 
+.price-update-form {
+  max-width: 30rem;
+}
+/* Main form container */
+.price-form {
+    background-color: var(--color-bg); /* Light beige background */
+    border: 0.1rem solid var(--color-light); /* Light border */
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 25rem;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form groups */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Labels */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-dark-txt); /* Dark text */
+}
+
+/* Input fields */
+input[type="text"] {
+    width: calc(100% - 0.5rem); /* Makes the input span the width of the form */
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 0.1rem solid var(--color-light); /* Light border */
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: var(--color-dark-txt);
+}
+
+.submit-btn {
+  background-color: var(--color-dark-txt); /* Dark background */
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Disposition en grille pour les écrans plus larges */
+@media screen and (min-width: 1024px) {
+  .pricing-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+  .pricing-section article{
+    width: auto;
+  }
+}

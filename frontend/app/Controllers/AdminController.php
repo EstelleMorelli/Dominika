@@ -26,7 +26,7 @@ class AdminController extends CoreController
         session_destroy(); // Détruire la session
 
         // Rediriger vers la page de login (ou autre page)
-        header('Location: /admin');
+        header("Location: " . $this->router->generate('admin-login-page'));
         exit;
     }
 

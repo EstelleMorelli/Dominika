@@ -32,8 +32,13 @@ if (isset($_SESSION['firstname'])) {
     <?php
 }
 
-if (isset($actionMsg) && $actionMsg != "") {
-    // Injection de la variable PHP dans le script JavaScript
-    echo '<script>window.alert("' . addslashes($actionMsg) . '")</script>'; 
-}
+if (isset($_SESSION['actionMsg'])): ?>
+    <script>
+        window.alert("<?= addslashes($_SESSION['actionMsg']); ?>");
+    </script>
+    <?php 
+        // On supprime le message de la session après l'affichage
+        unset($_SESSION['actionMsg']); 
+    ?>
+<?php endif;
 ?>

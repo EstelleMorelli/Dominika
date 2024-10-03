@@ -59,20 +59,21 @@ class PriceController extends Controller
      */
     public function update(Request $request, int $id)
     {
-        // Extraction des valeurs passées dans le body de la requête
-        $title = $request->input('title');
-        $duration = $request->input('duration');
-        $amount = $request->input('amount');
-        $currency = $request->input('currency');
-        // TODO : VERIFIER LES VALEURS
-
         // Recherche du prix en fonction de l'id
         $price= Price::findOrFail($id);
-        // Sauvegarde
-        $price->title = $title;
-        $price->duration = $duration;
-        $price->amount = $amount;
-        $price->currency = $currency;
+        // Mise à jour conditionnelle des champs avec sécurisation
+        if ($request->has('title')) {
+            $price->title = htmlspecialchars($request->input('title'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
+            }
+            if ($request->has('duration')) {
+            $price->duration = htmlspecialchars($request->input('duration'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
+            }
+            if ($request->has('amount')) {
+            $price->amount = htmlspecialchars($request->input('amount'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
+            }
+            if ($request->has('currency')) {
+            $price->currency = htmlspecialchars($request->input('currency'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
+            }
         // Gestion de la réponse HTTP
         if ($price->save()){
             return response()->json($price);
@@ -83,7 +84,7 @@ class PriceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(int $id)
+    public function delete(int $id)
     {
         //Récupération du prix en fonction de l'id
         $price= Price::findOrFail($id);

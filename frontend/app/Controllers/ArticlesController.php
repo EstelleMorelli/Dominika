@@ -36,7 +36,6 @@ class ArticlesController extends CoreController
     public function articleDetailUpdate($articleId)
     {
         require __DIR__ . '/../../public/api.php';
-        $actionMsg = "";
         $title = filter_input(INPUT_POST, 'article--title', FILTER_SANITIZE_SPECIAL_CHARS);
         $subtitle = filter_input(INPUT_POST, 'article--subtitle', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = filter_input(INPUT_POST, 'article--text', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -60,9 +59,8 @@ class ArticlesController extends CoreController
             // Déplacer le fichier de son emplacement temporaire vers la destination
             if (move_uploaded_file($fileTmpPath, $destinationPath)) {
                 $datas['picture'] = $fileName; 
-                $actionMsg = "Fichier téléchargé avec succès ! ";
             } else {
-                $actionMsg = "Une erreur est survenue lors du téléchargement du fichier.";
+                $_SESSION['actionMsg'] = "Une erreur est survenue lors du téléchargement du fichier.";
             }
         }
        
@@ -81,8 +79,11 @@ class ArticlesController extends CoreController
         curl_close($ch);
         $response = trim($response);
         // Décodage de la réponse JSON
-        $result = json_decode($response, true);    
-        $this->show('articles/articles', ['actionMsg'=>$actionMsg, 'articleTitle'=>$result['title'],'articleSubtitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
+        $result = json_decode($response, true);
+        $_SESSION['actionMsg'] = "L'article a été modifié avec succès";
+        // Redirection après la mise à jour
+        header("Location: " . $this->router->generate('article-detail', ['articleSlug'=>$result['slug']]));
+        exit;     
     }
 
         /**
@@ -128,9 +129,8 @@ class ArticlesController extends CoreController
             // Déplacer le fichier de son emplacement temporaire vers la destination
             if (move_uploaded_file($fileTmpPath, $destinationPath)) {
                 $datas['picture'] = $fileName; 
-                $actionMsg = "Fichier téléchargé avec succès ! ";
             } else {
-                $actionMsg = "Une erreur est survenue lors du téléchargement du fichier.";
+                $_SESSION['actionMsg'] = "Une erreur est survenue lors du téléchargement du fichier.";
             }
         }
        
@@ -150,7 +150,10 @@ class ArticlesController extends CoreController
         $response = trim($response);
         // Décodage de la réponse JSON
         $result = json_decode($response, true);
-        $this->show('articles/articles', ['actionMsg'=>$actionMsg, 'articleTitle'=>$result['title'],'articleSubtitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
+        $_SESSION['actionMsg'] = "L'article a été ajouté avec succès";
+        // Redirection après l'ajout
+        header("Location: " . $this->router->generate('article-detail', ['articleSlug'=>$result['slug']]));
+        exit;   
     }
 
     public function convertToSlug($string) {
@@ -171,7 +174,6 @@ class ArticlesController extends CoreController
     public function articleDelete($articleId)
     {
         require __DIR__ . '/../../public/api.php';
-        $actionMsg = "";
         $urlAPI = "{$api_url}/articles/{$articleId}";
         $ch = curl_init($urlAPI);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -182,7 +184,9 @@ class ArticlesController extends CoreController
         $response = curl_exec($ch);
         curl_close($ch);
         $response = trim($response);
-        $actionMsg="L'article a bien été supprimé";
-        $this->show('main/home', ['actionMsg'=>$actionMsg]);
+        $_SESSION['actionMsg'] = "L'article a été supprimé avec succès";
+        // Redirection après la suppression
+        header("Location: " . $this->router->generate('main-home'));
+        exit;   
     }
 }
