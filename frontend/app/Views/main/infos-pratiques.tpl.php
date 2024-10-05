@@ -41,6 +41,7 @@
         if (str_contains($currentPrice['title'], "coaching")){
             if (isset($_SESSION['firstname'])){ ?> 
                 <form action="<?="/prices/{$currentPrice['id']}"?>" method="POST" class="price-update-form">
+                <input type="text" id="price--title" name="price--title" required minlength="1" maxlength="50" size="15" value="<?= htmlspecialchars_decode($currentPrice['title']) ?>"/>
                 <input type="text" id="price--duration" name="price--duration" required minlength="1" maxlength="50" size="5" value="<?= htmlspecialchars_decode($currentPrice['duration']) ?>"/>
                 <input type="text" id="price--amount" name="price--amount" required minlength="1" maxlength="50" size="2" value="<?= htmlspecialchars_decode($currentPrice['amount']) ?>"/>
                 <input type="text" id="price--currency" name="price--currency" required minlength="1" maxlength="50" size="2" value="<?= htmlspecialchars_decode($currentPrice['currency']) ?>"/>

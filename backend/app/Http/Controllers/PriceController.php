@@ -64,16 +64,16 @@ class PriceController extends Controller
         // Mise à jour conditionnelle des champs avec sécurisation
         if ($request->has('title')) {
             $price->title = htmlspecialchars($request->input('title'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
-            }
-            if ($request->has('duration')) {
+        }
+        if ($request->has('duration')) {
             $price->duration = htmlspecialchars($request->input('duration'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
-            }
-            if ($request->has('amount')) {
+        }
+        if ($request->has('amount')) {
             $price->amount = htmlspecialchars($request->input('amount'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
-            }
-            if ($request->has('currency')) {
+        }
+        if ($request->has('currency')) {
             $price->currency = htmlspecialchars($request->input('currency'), ENT_QUOTES, 'UTF-8');  // Protection contre les XSS
-            }
+        }
         // Gestion de la réponse HTTP
         if ($price->save()){
             return response()->json($price);
