@@ -1,18 +1,17 @@
-<article> 
+<div class="infos-pratiques-container">
+    
     <div class="article--text">
-        <h2 class="article--title">
-        INFORMATIONS PRATIQUES
-        </h2>
-        <h3 class="article--subtitle">
-            Contact :
-        </h3>
+        <h2 class="article--title"> INFORMATIONS PRATIQUES </h2>
+        <h3 class="article--subtitle"> Contact : </h3>
         <img src="images/phone.png" class="contact-logo"> <strong> 06.16.22.24.11 </strong> </br>
         <img src="images/email.png" class="contact-logo"> <a href="mailto:contact@dominika-meno.fr">contact@dominika-meno.fr</a>
     </div>
-</article>
-<section class="pricing-section"> 
-<article> 
-    <div class="article--text">
+
+<?php if (isset($_SESSION['firstname'])){ ?> 
+    <div class="form-container">
+        <?php } ?>
+
+        <div class="article--text">
         <h3 class="article--subtitle"> Tarifs posturologie : </h3>
 <?php
     foreach($pricesList as $key => $currentPrice){
@@ -32,9 +31,8 @@
         }
     }
 ?>
-    </div>
-</article> 
-<article> 
+        </div>
+ 
         <div class="article--text">
         <h3 class="article--subtitle"> Tarifs coaching à domicile : </h3> 
         <ul>
@@ -55,13 +53,13 @@
         }
     }
 ?>
-    </ul>
-    </div>
-</article> 
-<article> 
+        </ul>
+        </div>
+
 <?php
     if (isset($_SESSION['firstname'])){ ?> 
-        <form action="<?="/price/ajouter"?>" method="POST" class="price-form">
+    <div class="article--text">
+        <form action="<?="/price/ajouter"?>" method="POST" class="price-update-form">
             <h2 class="form-title">Ajouter un nouveau tarif :</h2>
             <div class="form-group">
             <label for="price--title">Intitulé du tarif : </label>
@@ -81,11 +79,12 @@
             </div>
             <button type="submit" class="submit-btn">Valider</button>
         </form>
+    </div>
+    <?php }
+    if (isset($_SESSION['firstname'])){?> 
+    </div>
     <?php }
 ?>
-</article> 
-</section>
-<article> 
     <div class="article--text"> 
         <h3 class="article--subtitle"> Déroulement d’un <strong> bilan </strong> postural: </h3>
         <ul>
@@ -103,7 +102,7 @@
             <li> Ajustement du traitement (10min)</li>
         </ul>
     </div>
-</article>
+</div>
 
 <?php /*
 require_once __DIR__ . '\form.tpl.php'

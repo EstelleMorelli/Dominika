@@ -66,63 +66,185 @@
     margin-right: 0;
   }
 
-.price-update-form {
-  max-width: 30rem;
-}
-/* Main form container */
-.price-form {
-    background-color: var(--color-bg); /* Light beige background */
-    border: 0.1rem solid var(--color-light); /* Light border */
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 25rem;
-    margin: auto;
-    font-family: 'Arial', sans-serif;
+  /*POUR LA PAGE INFOS PRATIQUES*/
+/* Centrage global */
+.infos-pratiques-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Form groups */
-.form-group {
-    margin-bottom: 1.5rem;
+.infos-pratiques-container .article--text {
+  background-color: var(--color-light);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Labels */
-label {
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--color-dark-txt); /* Dark text */
+.infos-pratiques-container  h2.article--title {
+  text-align: center;
+  font-size: 1.8em;
+  color: var(--color-dark-txt);
+  margin-bottom: 20px;
 }
 
-/* Input fields */
-input[type="text"] {
-    width: calc(100% - 0.5rem); /* Makes the input span the width of the form */
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 0.1rem solid var(--color-light); /* Light border */
-    border-radius: 0.5rem;
-    background-color: #fff;
-    color: var(--color-dark-txt);
+.infos-pratiques-container h3.article--subtitle {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: var(--color-dark-txt);
+  border-bottom: 2px solid var(--color-dark-txt);
+  padding-bottom: 5px;
 }
 
-.submit-btn {
-  background-color: var(--color-dark-txt); /* Dark background */
-  color: #fff;
-  padding: 1rem;
+.infos-pratiques-container h4 {
+  font-size: 1.2em;
+  margin: 0.5rem 0rem;
+  color: var(--color-dark-txt);
+}
+
+.infos-pratiques-container ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.infos-pratiques-container ul li {
+  margin-bottom: 8px;
+}
+
+.infos-pratiques-container strong {
+  color: var(--color-dark-txt);
+}
+
+.infos-pratiques-container a {
+  color: var(--color-dark-txt);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.infos-pratiques-container a:hover {
+  text-decoration: underline;
+}
+
+/* Style des formulaires */
+.infos-pratiques-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--color-light);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.infos-pratiques-container form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.infos-pratiques-container form label {
+  font-size: 1em;
+  margin-bottom: 5px;
+  color: var(--color-dark-txt);
+}
+
+.infos-pratiques-container form input[type="text"],
+.infos-pratiques-container form input[type="number"] {
+  padding: 10px;
+  border: 1px solid var(--color-dark-elem);
+  border-radius: 5px;
+  font-size: 1em;
+  color: var(--color-dark-txt);
+  background-color: var(--color-bg);
+}
+
+.infos-pratiques-container form button {
+  padding: 10px 20px;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--color-dark-elem);
+  color: white;
+  font-size: 1.1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-/* Disposition en grille pour les écrans plus larges */
-@media screen and (min-width: 1024px) {
-  .pricing-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-    gap: 2rem;
-    margin: 2rem auto;
-    max-width: 1200px;
+.infos-pratiques-container form button:hover {
+  background-color: var(--color-dark-txt);
+}
+
+.infos-pratiques-container form a.deleteLink {
+  color: var(--color-dark-txt);
+  font-size: 0.9em;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.infos-pratiques-container form a.deleteLink:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.infos-pratiques-container .contact-logo {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.infos-pratiques-container .contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .infos-pratiques-container .article--text {
+    padding: 15px;
   }
-  .pricing-section article{
-    width: auto;
+
+  .infos-pratiques-container h2.article--title {
+    font-size: 1.5em;
+  }
+
+  .infos-pratiques-container h3.article--subtitle {
+    font-size: 1.2em;
+  }
+
+  .infos-pratiques-container form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .infos-pratiques-container form input[type="text"],
+  .infos-pratiques-container form input[type="number"] {
+    font-size: 1em;
+  }
+
+  .infos-pratiques-container form button {
+    font-size: 1em;
+  }
+
+  .infos-pratiques-container ul li {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .infos-pratiques-container .form-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .infos-pratiques-container .article--text {
+  width: 30%;
+  margin: 1rem;
   }
 }
