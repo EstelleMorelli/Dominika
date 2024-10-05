@@ -23,8 +23,8 @@
                 <input type="text" id="price--amount" name="price--amount" required minlength="1" maxlength="50" size="2" value="<?= htmlspecialchars_decode($currentPrice['amount']) ?>"/>
                 <input type="text" id="price--currency" name="price--currency" required minlength="1" maxlength="50" size="2" value="<?= htmlspecialchars_decode($currentPrice['currency']) ?>"/>
                 <button type="submit">Valider</button>
-                <a class="nav--menu__link-article deleteLink" href="<?= $router->generate('price-delete', ['priceId'=>$currentPrice['id']]);?>"> Supprimer ce tarif </a>
                 </form>
+                <a class="nav--menu__link-article deleteLink" href="<?= $router->generate('price-delete', ['priceId'=>$currentPrice['id']]);?>"> Supprimer ce tarif </a>
             <?php } else { ?>
                 <h4><?=$currentPrice['title'].' ('.$currentPrice['duration'].') :';?></h4> <?=round($currentPrice['amount']) .' '. $currentPrice['currency'];?>
             <?php }
@@ -45,8 +45,8 @@
                 <input type="text" id="price--amount" name="price--amount" required minlength="1" maxlength="50" size="2" value="<?= htmlspecialchars_decode($currentPrice['amount']) ?>"/>
                 <input type="text" id="price--currency" name="price--currency" required minlength="1" maxlength="50" size="2" value="<?= htmlspecialchars_decode($currentPrice['currency']) ?>"/>
                 <button type="submit">Valider</button>
-                <a class="nav--menu__link-article deleteLink" href="<?= $router->generate('price-delete', ['priceId'=>$currentPrice['id']]);?>"> Supprimer ce tarif </a>
                 </form>
+                <a class="nav--menu__link-article deleteLink" href="<?= $router->generate('price-delete', ['priceId'=>$currentPrice['id']]);?>"> Supprimer ce tarif </a>
             <?php } else { ?>
                 <li><?=$currentPrice['duration'].' : '. round($currentPrice['amount']) .' '. $currentPrice['currency'];?> </li>
             <?php }
