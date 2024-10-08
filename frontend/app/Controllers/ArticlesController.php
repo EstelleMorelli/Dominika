@@ -24,8 +24,8 @@ class ArticlesController extends CoreController
         $response = trim($response);
 
         // Décodage de la réponse JSON
-        $result = json_decode($response, true);      
-        $this->show('articles/articles', ['articleId'=>$result['id'], 'articleTitle'=>$result['title'],'articleSubtitle'=>$result['subtitle'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture']]);
+        $result = json_decode($response, true);    
+        $this->show('articles/articles', ['articleId'=>$result['id'], 'articleTitle'=>$result['title'],'articleSubtitle'=>$result['subtitle'], 'articleSlug'=> $result['slug'], 'articleContent'=>$result['content'], 'articlePicture'=>$result['picture'], 'articleLocalisations'=>$result['localisations']]);
     }
 
     /**
@@ -36,6 +36,8 @@ class ArticlesController extends CoreController
     public function articleDetailUpdate($articleId)
     {
         require __DIR__ . '/../../public/api.php';
+        var_dump($_POST);
+        /*
         $title = filter_input(INPUT_POST, 'article--title', FILTER_SANITIZE_SPECIAL_CHARS);
         $subtitle = filter_input(INPUT_POST, 'article--subtitle', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = filter_input(INPUT_POST, 'article--text', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -83,7 +85,7 @@ class ArticlesController extends CoreController
         $_SESSION['actionMsg'] = "L'article a été modifié avec succès";
         // Redirection après la mise à jour
         header("Location: " . $this->router->generate('article-detail', ['articleSlug'=>$result['slug']]));
-        exit;     
+        exit;     */
     }
 
         /**

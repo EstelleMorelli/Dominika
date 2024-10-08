@@ -14,7 +14,8 @@ class ArticleController extends Controller
     public function list()
     {
         // Récupération de la liste des articles et de leur contenu
-        return Article::all();
+        return Article::with('localisations')->get();
+
     }
 
     /**
@@ -23,7 +24,7 @@ class ArticleController extends Controller
     public function find(int $id)
     {
         //Récupération de l'article en fonction de l'id
-        return Article::findOrFail($id);
+        return Article::with('localisations')->findOrFail($id);
     }
 
         /**
@@ -32,7 +33,7 @@ class ArticleController extends Controller
     public function findBySlug(string $slug)
     {
         //Récupération de l'article en fonction de l'id
-        return Article::where('slug', $slug)->first();
+        return Article::with('localisations')->where('slug', $slug)->first();
     }
     
     /**

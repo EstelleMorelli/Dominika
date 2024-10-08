@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
+    protected $fillable = ['title', 'content'];
+    public function localisations()
+    {
+        return $this->belongsToMany(Localisation::class, 'article_localisation');
+    }
 }

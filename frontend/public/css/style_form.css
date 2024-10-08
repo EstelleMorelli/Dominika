@@ -66,6 +66,26 @@
     margin-right: 0;
   }
 
+/* POUR LES CHECKBOX DE LA MODIFICATION D'ARTICLE*/
+.checkbox--localisation {
+  margin: 1rem 0rem;
+}
+.checkbox--localisation label {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0rem;
+}
+.checkbox--localisation input[type="checkbox"] {
+  width: 20px; /* Increase size */
+  height: 20px; /* Increase size */
+  margin-right: 5px; /* Reduce space between checkbox and label */
+  vertical-align: middle; /* Align checkboxes to the middle of label text */
+}
+.checkbox--localisation div {
+  margin-bottom: 10px; /* Add spacing between checkboxes */
+}
+
   /*POUR LA PAGE INFOS PRATIQUES*/
 /* Centrage global */
 .infos-pratiques-container {

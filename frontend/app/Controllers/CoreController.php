@@ -78,6 +78,21 @@ class CoreController
 
         // Décodage de la réponse JSON
         $articlesList = json_decode($response, true);
+        $articlesNavDedicated = array_filter($articlesList, function ($article) {
+            return array_filter($article['localisations'], function ($localisation) {
+                return $localisation['id'] === 1;
+            });
+        });
+        $articlesHomePage = array_filter($articlesList, function ($article) {
+            return array_filter($article['localisations'], function ($localisation) {
+                return $localisation['id'] === 2;
+            });
+        });
+        $articlesListArticles = array_filter($articlesList, function ($article) {
+            return array_filter($article['localisations'], function ($localisation) {
+                return $localisation['id'] === 3;
+            });
+        });
 
         require_once __DIR__ . '/../Views/partials/header.tpl.php';
         require_once __DIR__ . '/../Views/partials/nav.tpl.php';

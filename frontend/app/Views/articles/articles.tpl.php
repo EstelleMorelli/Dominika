@@ -15,6 +15,14 @@ if (isset($_SESSION['firstname'])){
 </br>
     <label for="article--text">Texte de l'article:</label>
     <textarea id="article--text" name="article--text" required minlength="1" maxlength="65000"> <?= htmlspecialchars_decode($articleContent) ?> </textarea>
+    <div class="checkbox--localisation">
+        <input type="checkbox" id="localisation0" name="article--localisation[]" value="0">
+        <label for="localisation0">Lien de navigation dédié</label></br>
+        <input type="checkbox" id="localisation1" name="article--localisation[]" value="1">
+        <label for="localisation1">Page d'accueil</label></br>
+        <input type="checkbox" id="localisation2" name="article--localisation[]" value="2">
+        <label for="localisation2">Lien dans la section "Articles"</label></br>
+    </div>
     <button type="submit">Valider</button>
     </form>
     <?php
@@ -25,16 +33,35 @@ if (isset($_SESSION['firstname'])){
   </article>
   <?php
 } else {
+  echo ($articleSlug === 'apropos') ? '<article class="personnal-presentation">' : '<article>';
   ?>
-<article> 
       <img class="article--picture" src="/../images/<?=$articlePicture?>" alt="<?=$articleTitle?>"/>
       <div class="article--titleandtext">
     <h2 class="article--title">
-  <?= htmlspecialchars_decode($articleTitle) ?>
+  <?= htmlspecialchars_decode($articleSubtitle) ?>
     </h2>
-    <p class="article--text">
-    <?= htmlspecialchars_decode($articleContent) ?>
-    </p>
+
+  <?php 
+  function formatTextToParagraphs($text) {
+    // Séparer le texte en paragraphes basés sur des doubles sauts de ligne
+    $paragraphs = preg_split('/\n\s*/', $text);
+    
+    // Commencer à construire le HTML
+    $formattedText = '';
+    
+    // Parcourir chaque paragraphe et l'encapsuler dans des balises <p>
+    foreach ($paragraphs as $paragraph) {
+        // Nettoyer les espaces inutiles et les balises HTML
+        $cleanedParagraph = trim($paragraph);
+        // Vérifier si le paragraphe n'est pas vide
+        if (!empty($cleanedParagraph)) {
+            $formattedText .= '<p class="article--text">' . htmlspecialchars_decode($cleanedParagraph) . '</p>';
+        }
+    }
+    return $formattedText;
+  }
+    echo formatTextToParagraphs(htmlspecialchars_decode($articleContent));
+?>
 </div>
 </article>
 <?php
