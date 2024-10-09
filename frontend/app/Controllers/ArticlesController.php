@@ -37,14 +37,17 @@ class ArticlesController extends CoreController
     {
         require __DIR__ . '/../../public/api.php';
         var_dump($_POST);
-        /*
         $title = filter_input(INPUT_POST, 'article--title', FILTER_SANITIZE_SPECIAL_CHARS);
         $subtitle = filter_input(INPUT_POST, 'article--subtitle', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = filter_input(INPUT_POST, 'article--text', FILTER_SANITIZE_SPECIAL_CHARS);
+        $localisations = filter_input(INPUT_POST, 'article--localisation', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+        $slug = $this->convertToSlug($title);
         $datas = [
             'title' => $title,
             'subtitle' => $subtitle,
-            'content' => $content
+            'content' => $content,
+            'slug' => $slug,
+            'localisations' => $localisations
         ];
         // Vérifier si le fichier image a été soumis
         if (isset($_FILES['article--picture']) && $_FILES['article--picture']['error'] === UPLOAD_ERR_OK) {
@@ -85,7 +88,7 @@ class ArticlesController extends CoreController
         $_SESSION['actionMsg'] = "L'article a été modifié avec succès";
         // Redirection après la mise à jour
         header("Location: " . $this->router->generate('article-detail', ['articleSlug'=>$result['slug']]));
-        exit;     */
+        exit;
     }
 
         /**
@@ -109,12 +112,14 @@ class ArticlesController extends CoreController
         $title = filter_input(INPUT_POST, 'article--title', FILTER_SANITIZE_SPECIAL_CHARS);
         $subtitle = filter_input(INPUT_POST, 'article--subtitle', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = filter_input(INPUT_POST, 'article--text', FILTER_SANITIZE_SPECIAL_CHARS);
+        $localisations = filter_input(INPUT_POST, 'article--localisation', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
         $slug = $this->convertToSlug($title);
         $datas = [
             'title' => $title,
             'subtitle' => $subtitle,
             'content' => $content,
-            'slug' => $slug
+            'slug' => $slug,
+            'localisations' => $localisations
         ];
         // Vérifier si le fichier image a été soumis
         if (isset($_FILES['article--picture']) && $_FILES['article--picture']['error'] === UPLOAD_ERR_OK) {

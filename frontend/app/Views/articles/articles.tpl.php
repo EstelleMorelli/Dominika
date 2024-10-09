@@ -1,4 +1,5 @@
 <?php 
+var_dump($articleLocalisations);
 if (isset($_SESSION['firstname'])){
   ?> 
   <article>
@@ -16,11 +17,11 @@ if (isset($_SESSION['firstname'])){
     <label for="article--text">Texte de l'article:</label>
     <textarea id="article--text" name="article--text" required minlength="1" maxlength="65000"> <?= htmlspecialchars_decode($articleContent) ?> </textarea>
     <div class="checkbox--localisation">
-        <input type="checkbox" id="localisation0" name="article--localisation[]" value="0">
+        <input type="checkbox" id="localisation1" name="article--localisation[]" value="1"  <?php if(in_array(1, array_column($articleLocalisations, 'id'))) echo 'checked'; ?> >
         <label for="localisation0">Lien de navigation dédié</label></br>
-        <input type="checkbox" id="localisation1" name="article--localisation[]" value="1">
+        <input type="checkbox" id="localisation2" name="article--localisation[]" value="2" <?php if(in_array(2, array_column($articleLocalisations, 'id'))) echo 'checked'; ?> >
         <label for="localisation1">Page d'accueil</label></br>
-        <input type="checkbox" id="localisation2" name="article--localisation[]" value="2">
+        <input type="checkbox" id="localisation3" name="article--localisation[]" value="3" <?php if(in_array(3, array_column($articleLocalisations, 'id'))) echo 'checked'; ?>>
         <label for="localisation2">Lien dans la section "Articles"</label></br>
     </div>
     <button type="submit">Valider</button>

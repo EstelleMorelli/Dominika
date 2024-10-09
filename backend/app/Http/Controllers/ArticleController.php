@@ -41,13 +41,12 @@ class ArticleController extends Controller
      */
     public function create(Request $request)
     {
-        // Extraction des valeurs passées dans le body de la requête
-        $title = $request->input('title');
-        $subtitle = $request->input('subtitle');
-        $content = $request->input('content');
-        $picture = $request->input('picture');
-        $slug = $request->input('slug');
-        // TODO : VERIFIER LES VALEURS
+        // Extraction et sécurisation des valeurs passées dans le body de la requête
+        $title = htmlspecialchars($request->input('title'), ENT_QUOTES, 'UTF-8');
+        $subtitle = htmlspecialchars($request->input('subtitle'), ENT_QUOTES, 'UTF-8');
+        $content = htmlspecialchars($request->input('content'), ENT_QUOTES, 'UTF-8');
+        $picture = $request->input('picture'); 
+        $slug = htmlspecialchars($request->input('slug'), ENT_QUOTES, 'UTF-8');
 
         // Création d'une nouvelle instance Article
         $article = new Article();
@@ -59,6 +58,14 @@ class ArticleController extends Controller
         $article->slug = $slug;
         // Gestion de la réponse HTTP
         if ($article->save()){
+            // Vérification des localisations et ajout à la table pivot après sauvegarde de l'article
+            if ($request->has('localisations')) {
+                $localisations = $request->input('localisations');  // Récupération des localisations
+                if (is_array($localisations) && count($localisations) > 0) {
+                    // Attacher les localisations
+                    $article->localisations()->attach($localisations);
+                }
+            }
             return response()->json($article, Response::HTTP_CREATED);
         } 
         return response(null, Response::HTTP_INTERNAL_SERVER_ERROR);
@@ -90,6 +97,13 @@ class ArticleController extends Controller
         // Validation URL déjà effectuée, pas besoin de nettoyage supplémentaire si l'URL est correcte
         $article->picture = $request->input('picture');
         }
+        // Mise à jour des localisations (relation Many-to-Many)
+        if ($request->has('localisations')) {
+        $localisations = $request->input('localisations');  // Récupération des localisations depuis la requête
+        // Utilisation de la méthode sync() pour mettre à jour les localisations associées à l'article
+        $article->localisations()->sync($localisations);
+        }
+
         // Gestion de la réponse HTTP
         if ($article->save()){
             return response()->json($article);
