@@ -36,10 +36,14 @@ class ArticlesController extends CoreController
     public function articleDetailUpdate($articleId)
     {
         require __DIR__ . '/../../public/api.php';
-        var_dump($_POST);
         $title = filter_input(INPUT_POST, 'article--title', FILTER_SANITIZE_SPECIAL_CHARS);
         $subtitle = filter_input(INPUT_POST, 'article--subtitle', FILTER_SANITIZE_SPECIAL_CHARS);
+        $paragrapheMarq = '###'; // Marqueur de paragraphe personnalisé
+        // Récupérer le contenu soumis et le filtrer pour éviter les insertions XSS
         $content = filter_input(INPUT_POST, 'article--text', FILTER_SANITIZE_SPECIAL_CHARS);
+        // Remplacer les doubles retours à la ligne par le marqueur '###'
+        $content = preg_replace("/\r\n|\n|\r/", "\n", $content); // Uniformiser les retours à la ligne
+        $content = str_replace("\n\n", $paragrapheMarq, $content); // Marquer les paragraphes
         $localisations = filter_input(INPUT_POST, 'article--localisation', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
         $slug = $this->convertToSlug($title);
         $datas = [
@@ -111,7 +115,8 @@ class ArticlesController extends CoreController
         require __DIR__ . '/../../public/api.php';
         $title = filter_input(INPUT_POST, 'article--title', FILTER_SANITIZE_SPECIAL_CHARS);
         $subtitle = filter_input(INPUT_POST, 'article--subtitle', FILTER_SANITIZE_SPECIAL_CHARS);
-        $content = filter_input(INPUT_POST, 'article--text', FILTER_SANITIZE_SPECIAL_CHARS);
+        $paragrapheMarq = '###';
+        $content = str_replace("\n", $paragrapheMarq, filter_input(INPUT_POST, 'article--text', FILTER_SANITIZE_SPECIAL_CHARS));
         $localisations = filter_input(INPUT_POST, 'article--localisation', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
         $slug = $this->convertToSlug($title);
         $datas = [
@@ -164,14 +169,20 @@ class ArticlesController extends CoreController
     }
 
     public function convertToSlug($string) {
+        // Convertir la chaîne en minuscules
+        $string = strtolower($string);
         // Remplacer les apostrophes par rien
         $string = str_replace("'", "", $string);
+        // Remplacer les caractères spéciaux par rien (sauf les espaces)
+        $string = preg_replace('/[^\w\s\-]/', '', $string); // Garder les lettres, chiffres, tirets et espaces
         // Remplacer les espaces par des tirets
-        $string = str_replace(" ", "-", $string);
-        $string = strtolower($string);
-        // Retourner la chaîne modifiée
+        $string = preg_replace('/\s+/', '-', $string);
+        // Supprimer les tirets au début et à la fin, si présents
+        $string = trim($string, '-');
+
         return $string;
     }
+     
 
                 /**
      * Méthode s'occupant de la suppression d'un article 

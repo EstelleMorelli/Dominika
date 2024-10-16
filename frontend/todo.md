@@ -1,1 +1,2 @@
--> faire la fonction articleDelete pour supprimer un article en fonction de son id (ou de son slug?)
+* Ajouter un formulaire de modification pour les articles de la page d'accueil
+* réparer l'article "Qui suis-je" pb à cause du slug ?? a vérifier

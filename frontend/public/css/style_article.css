@@ -60,7 +60,7 @@ position: relative;
 .mindmapimg{
   max-width: 100%;
 }
-.about {
+.article {
   margin: 1rem;
   border-radius: 2rem;
   background-color: var(--color-light);
@@ -152,6 +152,9 @@ a {
   text-align: center;
 }
 @media screen and (min-width: 1024px) {
+  .home {
+    justify-content: space-between;
+  }
   article {
     font-size: large;
     width: 90vw;
@@ -172,7 +175,8 @@ a {
     width: 50rem;
     object-fit: cover;
   }
-  .about {
+
+  .article {
     border-radius: 2rem;
     background-color: var(--color-light);
     animation: appear linear;

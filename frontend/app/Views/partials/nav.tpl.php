@@ -15,7 +15,6 @@
     </div>
     <ul class="nav--menu__link-list">
       <li class="nav--menu__link"><a href="<?= $router->generate('main-home');?>">Accueil</a></li>
-      <li class="nav--menu__link"><a href="<?= $router->generate('main-about');?>">Qui suis-je ?</a></li>
       <?php foreach ($articlesNavDedicated as $key => $currentArticle):?>
       <li class="nav--menu__link"><a href="<?= $router->generate('article-detail', ['articleSlug'=>$currentArticle['slug']]);?>"><?=htmlspecialchars_decode($currentArticle['title'])?></a></li>
       <?php endforeach; ?>
