@@ -49,69 +49,6 @@ $mindmapCoord = require __DIR__ . '/../../../public/datas/mindmap-coord.php';
 
 
 <div class="mindmap--container__test" style="position: relative">
-<div alt="Hernie discale" class="circle"  
-    style="
-    top: 6.3%; left: 26.1%; width: 80px; height: 80px; 
-    background-image: url('/../images/hernie-discale.webp');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    cursor: pointer;"
-    onclick="window.location.href='<?= $router->generate('article-detail', ['articleSlug'=>"hernie-discale"]);?>'"></div>
-<div alt="Difficultés scolaires" class="circle" 
-    style="
-    top: 9%; left: 64%; width: 80px; height: 80px;
-    background-image: url('/../images/difficultes-scolaires.jpg');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    cursor: pointer;" 
-    onclick="window.location.href='<?= $router->generate('article-detail', ['articleSlug'=>"difficultes-scolaires"]);?>'">
-</div>
-<div alt="Posturologie" class="circle" 
-    style="
-    top: 32.1%; left: 33.8%; width: 120px; height: 120px;
-    background-image: url('/../images/posturologie.webp');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    cursor: pointer;" 
-    onclick="window.location.href='<?= $router->generate('article-detail', ['articleSlug'=>"posturologie"]);?>'">
-</div>
-<div alt="Maux de tête" class="circle" 
-    style="
-    top: 40%; left: 5%; width: 80px; height: 80px;
-    background-image: url('/../images/migraine.webp');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    cursor: pointer;" 
-    onclick="window.location.href='<?= $router->generate('article-detail', ['articleSlug'=>"maux-de-tete"]);?>'">
-</div>
-<div alt="Performance" class="circle" 
-    style="
-    top: 72.5%; left: 11.5%; width: 80px; height: 80px;
-    background-image: url('/../images/performance.webp');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    cursor: pointer;" 
-    onclick="window.location.href='<?= $router->generate('article-detail', ['articleSlug'=>"performance"]);?>'">
-</div>
-<div alt="Douleur persistante" class="circle" 
-    style="
-    top: 62%; left: 70.5%; width: 80px; height: 80px;
-    background-image: url('/../images/douleurs-persistantes.png');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    cursor: pointer;" 
-    onclick="window.location.href='<?= $router->generate('article-detail', ['articleSlug'=>"douleurs-persistantes"]);?>'">
-</div>
-
-</div>
-
-<div class="mindmap--container__test" style="position: relative">
 <?php     
     // Initialisation du compteur pour suivre l'index des coordonnées
     $coordIndex = 1;
@@ -127,6 +64,22 @@ $mindmapCoord = require __DIR__ . '/../../../public/datas/mindmap-coord.php';
             $left = '0%';
         }
 ?>
+    <!-- Cercle avec texte incurvé -->
+    <svg style="position: absolute; top: calc(<?=$top?> - 40px); left: <?=$left?>;" width="120" height="120">
+        <defs>
+            <!-- Définir un cercle invisible pour le texte -->
+            <path id="circlePath<?=$coordIndex?>" d="M 60, 60 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0" />
+        </defs>
+        
+        <!-- Texte incurvé sur le chemin -->
+        <text font-size="8" text-anchor="middle" fill="black">
+            <!-- Inverser le texte sur les cercles situés à droite -->
+            <textPath href="#circlePath<?=$coordIndex?>" startOffset="25%" method="<?= ($left > '50%') ? 'stretch' : 'align' ?>" side="<?= ($left > '50%') ? 'right' : 'left' ?>">
+                <?=htmlspecialchars($currentArticle['title'])?>
+            </textPath>
+        </text>
+    </svg
+        <!-- Cercle avec image en background -->
     <div alt="<?=$currentArticle['title']?>" class="circle" 
         style="
         top: <?=$top?>; 
