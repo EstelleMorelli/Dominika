@@ -9,7 +9,7 @@ function formatTextToParagraphsHome($text) {
     // Remplacer les simples retours à la ligne (\n) par des balises <br> pour conserver les sauts de ligne
     $text = str_replace("\n", "<br>", $text);
     // Ajouter les balises <p> autour des paragraphes
-    $paragraphs = '<p class="article--text">' . str_replace('###', '</p><p class="article--text">', $text) . '</p>';
+    $paragraphs = '<p class="article intro">' . str_replace('###', '</p><p class="article intro">', $text) . '</p>';
     return $paragraphs;
 }
 ?>

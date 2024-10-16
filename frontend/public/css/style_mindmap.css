@@ -6,6 +6,15 @@
     border-radius: 2rem;
     z-index: 1;
   }
+
+  .mindmap--container__test {
+    display: block;
+    width: 350px;
+    height: 350px;
+    margin: 2rem 0rem;
+    border-radius: 2rem;
+    background-color: var(--color-light);
+  }
   .circle {
     position: absolute;
     border-radius: 50%;
