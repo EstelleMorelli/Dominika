@@ -6,8 +6,10 @@
     border-radius: 2rem;
     z-index: 1;
   }
-
-  .mindmap--container__test {
+.mindmap--container__desktop{
+  display: none;
+}
+  .mindmap--container__mobile {
     display: block;
     width: 340px;
     height: 350px;
@@ -39,14 +41,25 @@
     border-radius: 4px;
     font-size: 1.2rem;
   }
-  
+/* Styles par défaut pour les petits écrans */
+.curved-text {
+  position: absolute;
+  top: calc(var(--top) - 15px); 
+  left: calc(var(--left) - 20px);
+  width: 120px;
+  height: 120px;
+}
+
   /* Effet d'ombre au survol */
   .circle:hover {
     box-shadow: 0 0 50px rgba(0, 0, 0, 1); /* Ombre noire légère */
   }
 
   @media screen and (min-width: 1024px) {
-    .mindmap--container__test {
+    .mindmap--container__mobile {
+      display: none;
+    }
+    .mindmap--container__desktop {
       display: block;
       width: 1000px;
       height: 1000px;
@@ -59,4 +72,11 @@
       width: 250px;
       height: 250px;
     }
+
+    .curved-text {
+      width: 345px;
+      height: 345px;
+      top: calc(var(--top) - 20px); 
+      left: calc(var(--left) - 50px);
+  }
   }
