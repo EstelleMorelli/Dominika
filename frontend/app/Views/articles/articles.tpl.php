@@ -21,7 +21,7 @@ if (isset($_SESSION['firstname'])){
         <input type="checkbox" id="localisation2" name="article--localisation[]" value="2" <?php if(isset($articleLocalisations)){if(in_array(2, array_column($articleLocalisations, 'id'))) echo 'checked';} ?> >
         <label for="localisation1">Page d'accueil</label></br>
         <input type="checkbox" id="localisation3" name="article--localisation[]" value="3" <?php if(isset($articleLocalisations)){if(in_array(3, array_column($articleLocalisations, 'id'))) echo 'checked';} ?>>
-        <label for="localisation2">Lien dans la section "Articles"</label></br>
+        <label for="localisation2">Lien dans la section "Articles" et ajout au mindmap de l'accueil</label></br>
     </div>
     <button type="submit">Valider</button>
     </form>
