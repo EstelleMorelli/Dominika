@@ -9,14 +9,16 @@
 
   .mindmap--container__test {
     display: block;
-    width: 350px;
+    width: 340px;
     height: 350px;
-    margin: 2rem 0rem;
+    margin: 2rem auto;
     border-radius: 2rem;
     background-color: var(--color-light);
   }
   .circle {
     position: absolute;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: transparent; /* Fond transparent pour que l'image soit visible */
     cursor: pointer; /* Curseur de type main pour indiquer l'interactivité */
@@ -41,4 +43,20 @@
   /* Effet d'ombre au survol */
   .circle:hover {
     box-shadow: 0 0 50px rgba(0, 0, 0, 1); /* Ombre noire légère */
+  }
+
+  @media screen and (min-width: 1024px) {
+    .mindmap--container__test {
+      display: block;
+      width: 1000px;
+      height: 1000px;
+      margin: 2rem auto;
+      border-radius: 2rem;
+      background-color: var(--color-light);
+    }
+
+    .circle {
+      width: 250px;
+      height: 250px;
+    }
   }

@@ -65,27 +65,25 @@ $mindmapCoord = require __DIR__ . '/../../../public/datas/mindmap-coord.php';
         }
 ?>
     <!-- Cercle avec texte incurvé -->
-    <svg style="position: absolute; top: calc(<?=$top?> - 40px); left: <?=$left?>;" width="120" height="120">
+    <svg style="position: absolute; top: calc(<?=$top?> - 20px); left: calc(<?=$left?> - 20px);" width="120" height="120">
         <defs>
             <!-- Définir un cercle invisible pour le texte -->
             <path id="circlePath<?=$coordIndex?>" d="M 60, 60 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0" />
         </defs>
         
         <!-- Texte incurvé sur le chemin -->
-        <text font-size="8" text-anchor="middle" fill="black">
-            <!-- Inverser le texte sur les cercles situés à droite -->
+        <text font-size="7.5" text-anchor="middle" fill="black" letter-spacing="1">
+            <!-- Ajuster l'orientation du texte sur la droite -->
             <textPath href="#circlePath<?=$coordIndex?>" startOffset="25%" method="<?= ($left > '50%') ? 'stretch' : 'align' ?>" side="<?= ($left > '50%') ? 'right' : 'left' ?>">
                 <?=htmlspecialchars($currentArticle['title'])?>
             </textPath>
         </text>
-    </svg
+    </svg>
         <!-- Cercle avec image en background -->
     <div alt="<?=$currentArticle['title']?>" class="circle" 
         style="
         top: <?=$top?>; 
         left: <?=$left?>; 
-        width: 80px; 
-        height: 80px;
         background-image: url('/../images/<?=$currentArticle['picture']?>');
         background-size: cover;
         background-position: center;
